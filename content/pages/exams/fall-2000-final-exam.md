@@ -1,6 +1,10 @@
 ---
 content_type: page
+learning_resource_types:
+- Exams
+ocw_type: CourseSection
 parent_title: Exams
+parent_type: CourseSection
 parent_uid: 3cf8bdea-1d49-826e-cbfd-ddc07baf1318
 title: Fall 2000 Final Exam
 uid: 5f0a9fe8-5569-ee06-9be1-d79825b30d27

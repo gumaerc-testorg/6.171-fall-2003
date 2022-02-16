@@ -1,6 +1,10 @@
 ---
 content_type: page
+learning_resource_types:
+- Assignments
+ocw_type: CourseSection
 parent_title: Assignments
+parent_type: CourseSection
 parent_uid: 7c3bc40c-1950-1cf6-ba32-c5d48982344b
 title: Metadata, Knowledge Management
 uid: d86b9c5c-e13d-887d-9446-c7ba7d8fa527
@@ -147,7 +151,7 @@ Notice that the km\_metadata\_elements table contains specifications for 1) gene
 
 If you have trouble feeding the above table definition to SQL\*Plus running under an Emacs shell, cut and paste it into a file called "foo.sql". Then run
 
-> >  sqlplus student23/thepassword < foo.sql
+> >  sqlplus student23/thepassword \< foo.sql
 
 from the shell.
 

@@ -1,6 +1,10 @@
 ---
 content_type: page
+learning_resource_types:
+- Assignments
+ocw_type: CourseSection
 parent_title: Assignments
+parent_type: CourseSection
 parent_uid: 7c3bc40c-1950-1cf6-ba32-c5d48982344b
 title: Problem Set 2 (Extending the ArsDigita Community System, Web Sites to Support
   Collaboration)
@@ -144,7 +148,7 @@ Here are some guidelines for your data model. Please note that this is not inten
 
 Now that you're written all of your create table statements and put them in a file named "/doc/sql/reserve.sql", feed the definitions to Oracle. If you don't want to cut and paste into SQL\*Plus, you can use Unix® shell I/O redirection:
 
-> > sqlplus / < reserve.sql
+> > sqlplus / \< reserve.sql
 
 If you slept through 6.170 and didn't learn how to write bug-free code, you might find yourself running this command repeatedly. Although Oracle provides powerful transaction management, data definition language statements such as create table can not be rolled back. So if your file defines three tables and there is an error in the definition of the second table, you will usually end up succeeding in defining two tables with the preceding command. You can go into Emacs and edit reserve.sql and then rerun the shell command. Oracle will ignore the first and third table definitions since the tables already exist and define only your second table.
 

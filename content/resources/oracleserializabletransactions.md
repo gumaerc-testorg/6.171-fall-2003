@@ -1,12 +1,16 @@
 ---
 content_type: resource
 description: ''
-file: /media/https%3A/open-learning-course-data-rc.s3.amazonaws.com/6-171-software-engineering-for-web-applications-fall-2003/2a1d77366cb309f70fd6bd2ebe6ba73f_oracleserializabletransactions.gif
+file: /media/courses/6-171-software-engineering-for-web-applications-fall-2003/2a1d77366cb309f70fd6bd2ebe6ba73f_oracleserializabletransactions.gif
 file_type: image/gif
 image_metadata:
   caption: ''
   credit: ''
   image-alt: ''
+learning_resource_types: []
+ocw_type: OCWImage
+parent_title: Calendar
+parent_type: CourseSection
 resourcetype: Image
 title: oracleserializabletransactions.gif
 uid: 2a1d7736-6cb3-09f7-0fd6-bd2ebe6ba73f

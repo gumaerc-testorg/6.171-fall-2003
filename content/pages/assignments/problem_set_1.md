@@ -1,6 +1,10 @@
 ---
 content_type: page
+learning_resource_types:
+- Assignments
+ocw_type: CourseSection
 parent_title: Assignments
+parent_type: CourseSection
 parent_uid: 7c3bc40c-1950-1cf6-ba32-c5d48982344b
 title: Basic db-backed Web sites, AOLserver, Tcl, SQL
 uid: 7f0f2453-a29c-f68c-2cf3-34d9648cc6f2
@@ -269,48 +273,48 @@ Here's what we need in order to cooperate:
 *   an agreed-upon URL at everyone's server where the quotations database may be obtained: "/quotations-xml.tcl"
 *   an agreed-upon format for the quotations.
 
-We'll format the quotations using XML, which is simply a conventional notation for describing structured data. XML structures consist of data strings enclosed in HTML-like tags of the form <foo> and </foo>, describing what kind of thing the data is supposed to be.
+We'll format the quotations using XML, which is simply a conventional notation for describing structured data. XML structures consist of data strings enclosed in HTML-like tags of the form \<foo> and \</foo>, describing what kind of thing the data is supposed to be.
 
 Here's an informal example, showing the structure we'll use for our quotations:
 
->  <quotations> 
+>  \<quotations> 
 > 
->  <onequote> 
+>  \<onequote> 
 > 
->  <quotation\_id>1</quotation\_id> 
+>  \<quotation\_id>1\</quotation\_id> 
 > 
->  <insertion\_date>1999-02-04</insertion\_date> 
+>  \<insertion\_date>1999-02-04\</insertion\_date> 
 > 
->  <author\_name>Bill Gates</author\_name> 
+>  \<author\_name>Bill Gates\</author\_name> 
 > 
->  <category>Computer Industry Punditry</category> 
+>  \<category>Computer Industry Punditry\</category> 
 > 
->  <quote>640K ought to be enough for anybody.</quote> 
+>  \<quote>640K ought to be enough for anybody.\</quote> 
 > 
->  </onequote> 
+>  \</onequote> 
 > 
->  <onequote> 
+>  \<onequote> 
 > 
 >  .. another row from the quotations table ... 
 > 
->  </onequote> 
+>  \</onequote> 
 > 
 >  ... some more rows 
->  </quotations> 
+>  \</quotations> 
 
  Notice that there's a separate tag for each column in our SQL data model: 
 
->  <quotation\_id> 
+>  \<quotation\_id> 
 > 
->  <insertion\_date> 
+>  \<insertion\_date> 
 > 
->  <author\_name> 
+>  \<author\_name> 
 > 
->  <category> 
+>  \<category> 
 > 
->  <quote> 
+>  \<quote> 
 
-There's also a "wrapper" tag that identifies each row as a <onequote> structure, and an outer wrapper that identifies a sequence of <onequote> stuctures as a <quotations> document.
+There's also a "wrapper" tag that identifies each row as a \<onequote> structure, and an outer wrapper that identifies a sequence of \<onequote> stuctures as a \<quotations> document.
 
 ### Building a DTD
 
@@ -318,31 +322,31 @@ We can give a formal decription of our XML structure, rather than an informal ex
 
 Our DTD will start with a definition of the quotations tag:
 
->  <!ELEMENT quotations (onequote)+> 
+>  \<!ELEMENT quotations (onequote)+> 
 
 This says that the quotations element must contain at least one occurrence of onequote but may contain more than one. Now we have to say what constitutes a legal onequote element:
 
->  <!ELEMENT onequote (quotation\_id,insertion\_date,author\_name,category,quote)> 
+>  \<!ELEMENT onequote (quotation\_id,insertion\_date,author\_name,category,quote)> 
 
 This says that the sub-elements, such as quotation\_id must each appear exactly once and in the specified order. Now we have to define an XML element that actually contains something other than other XML elements:
 
->  <!ELEMENT quotation\_id (#PCDATA)> 
+>  \<!ELEMENT quotation\_id (#PCDATA)> 
 
-This says that whatever falls between <quotation\_id> and </quotation\_id> is to be interpreted as raw characters rather than as containing further tags (PCDATA stands for "parsed character data").
+This says that whatever falls between \<quotation\_id> and \</quotation\_id> is to be interpreted as raw characters rather than as containing further tags (PCDATA stands for "parsed character data").
 
 Here's our complete DTD:
 
->  <!-- quotations.dtd --> <!ELEMENT quotations (onequote)+> 
+>  \<!-- quotations.dtd --> \<!ELEMENT quotations (onequote)+> 
 > 
->  <!ELEMENT onequote (quotation\_id,insertion\_date,author\_name,category,quote)> 
+>  \<!ELEMENT onequote (quotation\_id,insertion\_date,author\_name,category,quote)> 
 > 
->  <!ELEMENT quotation\_id (#PCDATA)> <!ELEMENT insertion\_date (#PCDATA)> 
+>  \<!ELEMENT quotation\_id (#PCDATA)> \<!ELEMENT insertion\_date (#PCDATA)> 
 > 
->  <!ELEMENT author\_name (#PCDATA)> 
+>  \<!ELEMENT author\_name (#PCDATA)> 
 > 
->  <!ELEMENT category (#PCDATA)> 
+>  \<!ELEMENT category (#PCDATA)> 
 > 
->  <!ELEMENT quote (#PCDATA)> 
+>  \<!ELEMENT quote (#PCDATA)> 
 
 You will find this extremely useful... Hey, actually you won't find this DTD useful at all for completing this part of the problem set. The only reasons that DTDs are ever useful is for feeding to XML parsers because they can then automatically tokenize an XML document. For implementing your quotations-xml.tcl page, you will only need to look at informal example.
 

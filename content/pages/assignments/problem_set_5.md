@@ -1,6 +1,10 @@
 ---
 content_type: page
+learning_resource_types:
+- Assignments
+ocw_type: CourseSection
 parent_title: Assignments
+parent_type: CourseSection
 parent_uid: 7c3bc40c-1950-1cf6-ba32-c5d48982344b
 title: Problem Set 5 (Family Tree)
 uid: 19578dc4-e855-76a6-7943-9056f9686b1d
