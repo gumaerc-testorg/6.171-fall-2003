@@ -197,15 +197,21 @@ _Guide to Web Publishing_
 
 Then, after the first call to ns\_db getrow the set will be
 
+> ```
 >  {{writer Tolstoy} {book "Anna Karenina"}} 
+> ```
 
 After the second call to ns\_db getrow the set will will be
 
+> ```
 >  {{writer Steinbeck} {book "Grapes of Wrath"}} 
+> ```
 
 and after the third call the set will be
 
+> ```
 >  {{writer Greenspun} {book "Guide to Web Publishing"}} 
+> ```
 
 The programs in the files quotations.tcl and quotation-add.tcl illustrate these ideas. It will be well worth your while to study these programs until you understand how they work, because you'll be doing a lot of this kind of programming throughout the semester.
 
@@ -237,13 +243,17 @@ We'd like you to build a system that implements per-user personalization of the 
 
 You can personalize Web services with the aid of magic cookies. A cookie issued by the server directs the browser to store data in browser's computer. To issue a cookie, the server includes a line like
 
+> ```
 >  Set-Cookie: cookie\_name=value; path=/ ; expires=Fri, 01-Jan-2010 01:00:00 GMT 
+> ```
 
 in the HTTP header sent to the browser. Here cookie\_name is the name for this cookie, and value is the associated value, which can contain any character or format except for semicolon, which terminates a cookie. The path specifies which URLs on the server the cookie applies to. Designating a path of slash (/) includes all URLs on the server.
 
 After the browser has accepted a server's cookie, it will include the cookie name and value as part of its HTTP requests whenever it asks that server for an applicable URL. Your Tcl programs can read this information using the AOLServer API
 
+> ```
 >  \[ns\_set get \[ns\_conn headers\] Cookie\] 
+> ```
 
 After the expiration date, the browser no longer sends the cookie information. The server can also issue cookies with no specified expiration date, in which case, the cookie is not persistent -- the browser uses it only for that one session.
 
@@ -277,42 +287,78 @@ We'll format the quotations using XML, which is simply a conventional notation f
 
 Here's an informal example, showing the structure we'll use for our quotations:
 
+> ```
 >  \<quotations> 
+> ```
 > 
+> ```
 >  \<onequote> 
+> ```
 > 
+> ```
 >  \<quotation\_id>1\</quotation\_id> 
+> ```
 > 
+> ```
 >  \<insertion\_date>1999-02-04\</insertion\_date> 
+> ```
 > 
+> ```
 >  \<author\_name>Bill Gates\</author\_name> 
+> ```
 > 
+> ```
 >  \<category>Computer Industry Punditry\</category> 
+> ```
 > 
+> ```
 >  \<quote>640K ought to be enough for anybody.\</quote> 
+> ```
 > 
+> ```
 >  \</onequote> 
+> ```
 > 
+> ```
 >  \<onequote> 
+> ```
 > 
+> ```
 >  .. another row from the quotations table ... 
+> ```
 > 
+> ```
 >  \</onequote> 
+> ```
 > 
+> ```
 >  ... some more rows 
 >  \</quotations> 
+> ```
 
+```
  Notice that there's a separate tag for each column in our SQL data model: 
+```
 
+> ```
 >  \<quotation\_id> 
+> ```
 > 
+> ```
 >  \<insertion\_date> 
+> ```
 > 
+> ```
 >  \<author\_name> 
+> ```
 > 
+> ```
 >  \<category> 
+> ```
 > 
+> ```
 >  \<quote> 
+> ```
 
 There's also a "wrapper" tag that identifies each row as a \<onequote> structure, and an outer wrapper that identifies a sequence of \<onequote> stuctures as a \<quotations> document.
 
@@ -322,31 +368,49 @@ We can give a formal decription of our XML structure, rather than an informal ex
 
 Our DTD will start with a definition of the quotations tag:
 
+> ```
 >  \<!ELEMENT quotations (onequote)+> 
+> ```
 
 This says that the quotations element must contain at least one occurrence of onequote but may contain more than one. Now we have to say what constitutes a legal onequote element:
 
+> ```
 >  \<!ELEMENT onequote (quotation\_id,insertion\_date,author\_name,category,quote)> 
+> ```
 
 This says that the sub-elements, such as quotation\_id must each appear exactly once and in the specified order. Now we have to define an XML element that actually contains something other than other XML elements:
 
+> ```
 >  \<!ELEMENT quotation\_id (#PCDATA)> 
+> ```
 
 This says that whatever falls between \<quotation\_id> and \</quotation\_id> is to be interpreted as raw characters rather than as containing further tags (PCDATA stands for "parsed character data").
 
 Here's our complete DTD:
 
+> ```
 >  \<!-- quotations.dtd --> \<!ELEMENT quotations (onequote)+> 
+> ```
 > 
+> ```
 >  \<!ELEMENT onequote (quotation\_id,insertion\_date,author\_name,category,quote)> 
+> ```
 > 
+> ```
 >  \<!ELEMENT quotation\_id (#PCDATA)> \<!ELEMENT insertion\_date (#PCDATA)> 
+> ```
 > 
+> ```
 >  \<!ELEMENT author\_name (#PCDATA)> 
+> ```
 > 
+> ```
 >  \<!ELEMENT category (#PCDATA)> 
+> ```
 > 
+> ```
 >  \<!ELEMENT quote (#PCDATA)> 
+> ```
 
 You will find this extremely useful... Hey, actually you won't find this DTD useful at all for completing this part of the problem set. The only reasons that DTDs are ever useful is for feeding to XML parsers because they can then automatically tokenize an XML document. For implementing your quotations-xml.tcl page, you will only need to look at informal example.
 
@@ -397,8 +461,10 @@ We're going to shift gears now into a portion of the problem set designed to tea
 *   create a tab-separated file in Emacs containing five lines, each line to contain your favorite stock symbol, an integer number of shares owned, and a date acquired (in the form MM/DD/YYYY)
 *   create an Oracle table to hold these data:
     
+    > ```
     > create table my\_stocks ( symbol varchar(20) not null, n\_shares integer not null, 
     > date\_acquired date not null );
+    > ```
     
 *   use the sqlldr shell command to invoke SQL\*Loader to slurp up your tab-separated file into the my\_stocks table (see page 1183 of Oracle8: The Complete Reference and the official Oracle docs.)
 
@@ -409,8 +475,10 @@ This exercise exists because we found that, when faced with the task of moving d
 *   using only one SQL statement, create a table called stock\_prices with three columns: symbol, quote\_date, price. After this one statement, you should have created the table and filled it with one row per symbol in my\_stocks. The date and price columns should be filled with the current date and a nominal price. Hint: select symbol, sysdate as quote\_date, 31.415 as price from my\_stocks;.
 *   create a new table:
     
+    > ```
     > create table newly\_acquired\_stocks ( symbol varchar(20) not null, n\_shares integer not null, 
     > date\_acquired date not null ); 
+    > ```
     
 *   using a single insert into .. select ... statement (with a WHERE clause appropriate to your sample data), copy about half the rows from my\_stocks into newly\_acquired\_stocks
 

@@ -55,7 +55,7 @@ Optimistic and Pessimistic Locking
 
 Pitches by Prospective Clents
 
-Slides: sql-examples.txt ([TXT](/courses/electrical-engineering-and-computer-science/6-171-software-engineering-for-web-applications-fall-2003/calendar/sqlexamples.txt)), oracle-multiversion-read.gif ([GIF]({{< baseurl >}}/resources/oraclemultiversionread)), oracle-serializable-transactions.gif ([GIF]({{< baseurl >}}/resources/oracleserializabletransactions)))
+Slides: sql-examples.txt ([TXT]({{< baseurl >}}/resources/sqlexamples)), oracle-multiversion-read.gif ([GIF]({{< baseurl >}}/resources/oraclemultiversionread)), oracle-serializable-transactions.gif ([GIF]({{< baseurl >}}/resources/oracleserializabletransactions)))
 
 
 {{< tdclose >}}
@@ -132,7 +132,7 @@ User Registration and Management Exercises Due
 Team Presentations and Discussion
 
 Data Model Normalization and Third Normal Form:  
-Make sure you've read the normal form sections in the Content Management chapter and maybe [this SQL for Web Nerds chapter](http://philip.greenspun.com/sql/normalization). We'll be taking apart this table ([TXT](/courses/electrical-engineering-and-computer-science/6-171-software-engineering-for-web-applications-fall-2003/calendar/mp3.text)) for supporting an MP3 sharing service.
+Make sure you've read the normal form sections in the Content Management chapter and maybe [this SQL for Web Nerds chapter](http://philip.greenspun.com/sql/normalization). We'll be taking apart this table ([TXT]({{< baseurl >}}/resources/mp3)) for supporting an MP3 sharing service.
 
 
 {{< tdclose >}}

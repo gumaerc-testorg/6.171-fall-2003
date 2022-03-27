@@ -159,8 +159,11 @@ from the shell.
 
 Create a directory /admin/km/ under your Web server page root. Go to a Unix® shell and type
 
-> \> cd /web/yourservername/www/admin/
+> ```
+> > cd /web/yourservername/www/admin/
 > > chmod a+w km
+> 
+> ```
 
 So that the /admin/km/ directory will be writable by the Web server. Now use the prototype builder (available on your own server at /admin/prototype/) to generate admin pages for the  
 km\_metadata\_elements and km\_metadata\_object\_typestables.
@@ -274,9 +277,12 @@ After the ns\_conn close, insert a row into the km\_object\_views table iff ther
 
 However, you can also do this with a single ns\_db dml statement. Here's an example of an INSERT statement that only has an effect if there isn't already a row in the table.
 
+> ```
 > insert into msg\_id\_generator (last\_msg\_id)
 > select ('000000') from dual
 > where 0 = (select count(last\_msg\_id) from msg\_id\_generator);
+> 
+> ```
 
 Apply this idea to the problem of thread-safe logging if and only if there isn't an identical row logged within the last 24 hours.
 

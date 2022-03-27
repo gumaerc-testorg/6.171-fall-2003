@@ -7,6 +7,7 @@ learning_resource_types: []
 ocw_type: OCWFile
 parent_title: Related Resources
 parent_type: CourseSection
+parent_uid: 9fc825a9-3b9b-28e5-316c-ed8238253515
 resourcetype: Document
 title: friendster.pdf
 uid: 259cc8e9-8309-47cf-fe12-cbca51464c30

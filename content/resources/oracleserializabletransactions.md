@@ -11,6 +11,7 @@ learning_resource_types: []
 ocw_type: OCWImage
 parent_title: Calendar
 parent_type: CourseSection
+parent_uid: 3a971e48-a46a-b35d-6a51-e7a66ff172da
 resourcetype: Image
 title: oracleserializabletransactions.gif
 uid: 2a1d7736-6cb3-09f7-0fd6-bd2ebe6ba73f

@@ -11,6 +11,7 @@ learning_resource_types: []
 ocw_type: OCWImage
 parent_title: Calendar
 parent_type: CourseSection
+parent_uid: 3a971e48-a46a-b35d-6a51-e7a66ff172da
 resourcetype: Image
 title: oraclemultiversionread.gif
 uid: 703b3243-262c-ccc1-be17-b5274222edb0
