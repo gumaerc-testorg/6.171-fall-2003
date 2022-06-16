@@ -1,5 +1,6 @@
 ---
 content_type: page
+description: ''
 learning_resource_types:
 - Exams
 ocw_type: CourseSection
@@ -8,6 +9,10 @@ parent_type: CourseSection
 parent_uid: 3cf8bdea-1d49-826e-cbfd-ddc07baf1318
 title: Fall 2003 Midterm Exam
 uid: 3a9cdb09-de71-3e54-75d4-8fbdc8b018b1
+video_files:
+  video_thumbnail_file: null
+video_metadata:
+  youtube_id: null
 ---
 
 Rules

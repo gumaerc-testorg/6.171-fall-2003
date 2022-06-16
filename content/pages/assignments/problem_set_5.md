@@ -1,5 +1,6 @@
 ---
 content_type: page
+description: ''
 learning_resource_types:
 - Assignments
 ocw_type: CourseSection
@@ -8,6 +9,10 @@ parent_type: CourseSection
 parent_uid: 7c3bc40c-1950-1cf6-ba32-c5d48982344b
 title: Problem Set 5 (Family Tree)
 uid: 19578dc4-e855-76a6-7943-9056f9686b1d
+video_files:
+  video_thumbnail_file: null
+video_metadata:
+  youtube_id: null
 ---
 
 Reading for This Week
@@ -80,7 +85,6 @@ Here are some guidelines for your data model:
 
 *   create a table called "family\_relatives" to store the family members. Here is a skeleton:
     
-    > ```
     > create table family\_relatives (  
     > relative\_id integer primary key,  
     > -- optional pointer to users table  
@@ -99,12 +103,9 @@ Here are some guidelines for your data model:
     > -- note the use of multi-column check constraints  
     > check ( birthyear is not null or birthday is not null)  
     > );
-    > 
-    > ```
     
 *   create a table called "family\_photos" to store photographs and scanned documents, such as diplomas. We'll draw some inspiration from the /doc/sql/general-comments.sql file:
     
-    > ```
     > create table family\_photos (  
     > family\_photo\_id  integer primary key,  
     > photo   blob not null,  
@@ -122,22 +123,16 @@ Here are some guidelines for your data model:
     > check (access\_control in ('public', 'family', 'designated')),  
     > check (item\_date is not null or item\_year is not null)  
     > );
-    > 
-    > ```
     
 
-> > ```
-> > -- a photo might contain more than one person so we need  
+> > \-- a photo might contain more than one person so we need  
 > > -- an extra table  
 > > create table family\_photo\_relative\_map (  
 > > relative\_id  references family\_relatives,  
 > > family\_photo\_id  references family\_photos,  
 > > primary key (relative\_id, family\_photo\_id)  
 > > );
-> > 
-> > ```
 > 
-> > ```
 > > create table family\_photo\_access\_control (  
 > > family\_photo\_id  references family\_photos,  
 > > user\_id   references users,  
@@ -145,12 +140,9 @@ Here are some guidelines for your data model:
 > > -- (makes it fast to ask "who gets to see this photo")  
 > > primary key (family\_photo\_id, user\_id)  
 > > );
-> > 
-> > ```
 
 *   create a table called "family\_stories" to record stories about family members at different ages:
     
-    > ```
     > Date/time arithmetic
     > create table family\_stories (  
     > family\_story\_id  integer primary key,  
@@ -161,27 +153,16 @@ Here are some guidelines for your data model:
     > check (access\_control in ('public', 'family', 'designated')),  
     > check (item\_date is not null or item\_year is not null)  
     > );
-    > 
-    > ```
     
 
-> > ```
-> > -- a story might be about more than one person  
+> > \-- a story might be about more than one person  
 > > create table family\_story\_relative\_map (  
 > > family\_story\_id  references family\_stories,  
 > > relative\_id  references family\_relatives,  
 > > primary key (relative\_id, family\_story\_id)  
 > > );
-> > 
-> > ```
-
-```
-
 
 ### Exercise 2: The Family Tree Page
-
-
-```
 
 Build a set of Tcl scripts at /family that will allow users to
 
@@ -236,10 +217,7 @@ Build a /family/search-stories.tcl page that lets users search through the CLOBs
 
 All of these issues can be addressed to some extent by using the Oracle Intermedia text indexing system:
 
-> ```
 > create index family\_stories\_ctx on family\_stories (story) indextype is ctxsys.context;
-> 
-> ```
 
 For examples of how to query and present results, read http://photo.net/doc/site-wide-search.html and the Oracle Intermedia Text reference at http://philip.greenspun.com/sql/ref/intermediatext.
 

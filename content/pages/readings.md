@@ -1,10 +1,15 @@
 ---
 content_type: page
+description: ''
 learning_resource_types:
 - Readings
 ocw_type: CourseSection
 title: Readings
 uid: d64a6ed9-8a57-aabe-f96f-1b5c86f05ce2
+video_files:
+  video_thumbnail_file: null
+video_metadata:
+  youtube_id: null
 ---
 
 The required textbooks for the class are both available online:

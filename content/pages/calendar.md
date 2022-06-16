@@ -1,9 +1,14 @@
 ---
 content_type: page
+description: ''
 learning_resource_types: []
 ocw_type: CourseSection
 title: Calendar
 uid: 3a971e48-a46a-b35d-6a51-e7a66ff172da
+video_files:
+  video_thumbnail_file: null
+video_metadata:
+  youtube_id: null
 ---
 
 The assignment due dates listed below refer to exercises from the online course textbook, [Internet Application Workbook](http://philip.greenspun.com/internet-application-workbook/).
@@ -55,7 +60,7 @@ Optimistic and Pessimistic Locking
 
 Pitches by Prospective Clents
 
-Slides: sql-examples.txt ([TXT]({{< baseurl >}}/resources/sqlexamples)), oracle-multiversion-read.gif ([GIF]({{< baseurl >}}/resources/oraclemultiversionread)), oracle-serializable-transactions.gif ([GIF]({{< baseurl >}}/resources/oracleserializabletransactions)))
+Slides: sql-examples.txt ({{% resource_link c959ae5a-3ac1-17c1-b58d-cd9340ab3f85 "TXT" %}}), oracle-multiversion-read.gif ({{% resource_link 703b3243-262c-ccc1-be17-b5274222edb0 "GIF" %}}), oracle-serializable-transactions.gif ({{% resource_link 2a1d7736-6cb3-09f7-0fd6-bd2ebe6ba73f "GIF" %}}))
 
 
 {{< tdclose >}}
@@ -93,7 +98,7 @@ Basics Exercises Due
 
 Data Modelling: Airline Example ([TXT](/courses/electrical-engineering-and-computer-science/6-171-software-engineering-for-web-applications-fall-2003/calendar/airlinereservationsystem.txt))
 
-Improving Query Performance with RDBMS B-tree Indices ([GIF]({{< baseurl >}}/resources/oraclebtree))
+Improving Query Performance with RDBMS B-tree Indices ({{% resource_link 88f1daa8-e775-96a2-ba9e-0ac980e053ba "GIF" %}})
 
 
 {{< tdclose >}}
@@ -132,7 +137,7 @@ User Registration and Management Exercises Due
 Team Presentations and Discussion
 
 Data Model Normalization and Third Normal Form:  
-Make sure you've read the normal form sections in the Content Management chapter and maybe [this SQL for Web Nerds chapter](http://philip.greenspun.com/sql/normalization). We'll be taking apart this table ([TXT]({{< baseurl >}}/resources/mp3)) for supporting an MP3 sharing service.
+Make sure you've read the normal form sections in the Content Management chapter and maybe [this SQL for Web Nerds chapter](http://philip.greenspun.com/sql/normalization). We'll be taking apart this table ({{% resource_link 0eea5708-ba07-6d33-9159-37e2153bad88 "TXT" %}}) for supporting an MP3 sharing service.
 
 
 {{< tdclose >}}

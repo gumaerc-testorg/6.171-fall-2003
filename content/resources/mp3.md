@@ -1,7 +1,7 @@
 ---
 content_type: resource
 description: ''
-file: /media/courses/6-171-software-engineering-for-web-applications-fall-2003/0eea5708ba076d33915937e2153bad88_mp3.text
+file: /courses/6-171-software-engineering-for-web-applications-fall-2003/0eea5708ba076d33915937e2153bad88_mp3.text
 file_type: text/plain
 learning_resource_types: []
 ocw_type: OCWFile
