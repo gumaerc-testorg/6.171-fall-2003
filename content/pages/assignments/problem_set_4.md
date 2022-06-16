@@ -1,5 +1,7 @@
 ---
 content_type: page
+description: ''
+draft: false
 learning_resource_types:
 - Assignments
 ocw_type: CourseSection
@@ -8,31 +10,30 @@ parent_type: CourseSection
 parent_uid: 7c3bc40c-1950-1cf6-ba32-c5d48982344b
 title: Metadata, Knowledge Management
 uid: d86b9c5c-e13d-887d-9446-c7ba7d8fa527
+video_files:
+  video_thumbnail_file: null
+video_metadata:
+  youtube_id: null
 ---
+## Reading for This Week
 
-Reading for This Week
----------------------
+- Transactions chapter from Oracle Concepts document.
 
-*   Transactions chapter from Oracle Concepts document.
-
-Objectives
-----------
+## Objectives
 
 Teach students the virtues of metadata. More specifically, they learn how to formally represent the requirements of a Web service and then build a computer program to generate the computer programs that implement that service.
 
-[The Huge Picture](#1)  
-[The Big Picture](#2)  
-[The Medium-Sized Picture](#3)  
-[A Data Model to Represent your Data Model](#4)  
+[The Huge Picture](#1)     
+[The Big Picture](#2)     
+[The Medium-Sized Picture](#3)     
+[A Data Model to Represent your Data Model](#4)     
 [Optional Assignment](#5)
 
-{{< anchor "1" >}}{{< /anchor >}}The Huge Picture
--------------------------------------------------
+## {{< anchor "1" >}}{{< /anchor >}}The Huge Picture
 
 Organizations have complex requirements for their information systems. They also have insane schedules and demand that you build their system within weeks. Finally, they are fickle and have no compunction about changing the requirements mid-stream.
 
-{{< anchor "2" >}}{{< /anchor >}}The Big Picture
-------------------------------------------------
+## {{< anchor "2" >}}{{< /anchor >}}The Big Picture
 
 Corporations all have knowledge management systems even though generally they may not have any knowledge. Universities claim to have knowledge and yet none have knowledge management systems. You are going to build a knowledge management system for your university's computer science department. In order to ensure that you can get a job after this course is over, you must refer to your final product as "a KM system".
 
@@ -40,23 +41,21 @@ Another issue is a perennial side-show in the world-wide computer programming ci
 
 If you're programming one Web page at a time, you can switch to the Language du Jour in search of higher productivity. But you won't achieve significant gains unless you switch from writing code for one page. You need to think about ways to write down a formal description of the application and user experience, then let the computer generate the application automatically.
 
-{{< anchor "3" >}}{{< /anchor >}}The Medium-Sized Picture
----------------------------------------------------------
+## {{< anchor "3" >}}{{< /anchor >}}The Medium-Sized Picture
 
 Knowledge is text, authored by a user of the community. The user may attach a document, photograph, or spreadsheet to this text. Other users can comment on the knowledge, submitting text and optional attachments of their own. What distinguishes a knowledge management system from the standard /bboard module of the ACS? The following:
 
-*   Links among knowledge objects
-*   Facilities for browsing and searching that are more powerful than in the standard /bboard system, where browse-by-category is the only option beyond full-text search
-*   Tracking and rewarding of contributions and reuse
+- Links among knowledge objects
+- Facilities for browsing and searching that are more powerful than in the standard /bboard system, where browse-by-category is the only option beyond full-text search
+- Tracking and rewarding of contributions and reuse
 
-{{< anchor "4" >}}{{< /anchor >}}A Data Model to Represent your Data Model
---------------------------------------------------------------------------
+## {{< anchor "4" >}}{{< /anchor >}}A Data Model to Represent your Data Model
 
 Business people like to talk about "objects" rather than "rows in tables". This doesn't mean that the MBA curriculum includes inheritance and method combination in the Common Lisp Object System. What seems to have happened is that
 
-1.  Xerox PARC and MIT developed object-oriented programming systems in the 1970s, including Smalltalk and the Lisp Machine
-2.  People hailed these systems as rather advanced
-3.  The business community finally picked up the object-oriented buzz during the 1990s
+1. Xerox PARC and MIT developed object-oriented programming systems in the 1970s, including Smalltalk and the Lisp Machine
+2. People hailed these systems as rather advanced
+3. The business community finally picked up the object-oriented buzz during the 1990s
 
 When a business person talks about an "object", what he or she generally means is "a row in a relational database table".
 
@@ -64,13 +63,13 @@ In order to make your system comprehensible to the CIO/CTO types who will be ado
 
 We need a way to represent the kinds of objects that our system will represent first. Let's assume that we'll have at least the following object types:
 
-*   Person
-*   Publication
-*   Data structure
-*   System
-*   Algorithm
-*   Problem
-*   Language
+- Person
+- Publication
+- Data structure
+- System
+- Algorithm
+- Problem
+- Language
 
 To say that "John McCarthy developed the Lisp programming language", the user would create two objects: one of type language and one of type person. Why not link to the users table instead? John McCarthy might not be a registered user of the system. Some of the people you'll be referencing, e.g., John Von Neumann, are dead. Characteristics of the Lisp language would be stored as elements of the language object.
 
@@ -78,80 +77,86 @@ For an example of what a completed system of this nature might look like to the 
 
 For each object type we'll be creating an Oracle table. For each Oracle table we create, we store one row in the metadata table:
 
-create table km\_metadata\_object\_types (  
-        table\_name              varchar(21) primary key,  
-        pretty\_name             varchar(100) not null,  
-        pretty\_plural             varchar(100)  
+```plaintext
+create table km_metadata_object_types (
+        table_name              varchar(21) primary key,
+        pretty_name             varchar(100) not null,
+        pretty_plural             varchar(100)
 );
+```
 
 We need to store information about what elements will be kept for each type of object. Note that some elements are common across object types:
 
-*   Name (a short description of the thing)
-*   Overview (a longer description)
-*   Who created this object
-*   When they created it
-*   Who modified it last
-*   When they modified it
-*   Who has the right to modify it
-*   Who has the right to view it
-*   Does it need approval?
-*   Has it been approved?
-*   If so, by whom and when?
-*   Iif so, under what section?
+- Name (a short description of the thing)
+- Overview (a longer description)
+- Who created this object
+- When they created it
+- Who modified it last
+- When they modified it
+- Who has the right to modify it
+- Who has the right to view it
+- Does it need approval?
+- Has it been approved?
+- If so, by whom and when?
+- Iif so, under what section?
 
 You won't be writing code to implement fancy permissioning so not all of this information will be useful in this problem set. However, it is good to have it in your data model even if you aren't going to build .tcl pages to update or query it. Notice that you may need to define extra tables to support some of this many-to-one information, e.g., the access control list for an object.
 
 For elements that are unique to an object type (i.e., elements other than the standard ones listed above), we need to insert one row in a metadata table per element:
 
-create table km\_metadata\_elements (  
-        metadata\_id             integer primary key,  
-        table\_name              not null references km\_metadata\_object\_types,  
-        column\_name             varchar(30) not null,  
-        pretty\_name             varchar(100) not null,  
-        abstract\_data\_type      varchar(30) not null,  -- ie. "text" or "shorttext" "boolean" "user"  
- -- this one is not null except when abstract\_data\_type is "user"  
-        oracle\_data\_type        varchar(30),   -- "varchar(4000)"  
-        -- e.g., "not null" or "check foobar in ('christof', 'patrick')"  
-        extra\_sql               varchar(4000),  
-        -- values are 'text', 'textarea', 'select', 'radio',  
- -- 'selectmultiple', 'checkbox', 'checkboxmultiple', 'selectsql'  
-        presentation\_type       varchar(100) not null,  
-        -- e.g., for textarea, this would be "rows=6 cols=60", for select, Tcl list,  
-        -- for selectsql, an SQL query that returns N district values  
-        -- for email addresses mailto:  
-        presentation\_options    varchar(4000),  
-        -- pretty\_name is going to be the short prompt,  
- -- e.g., for an update page, but we also need something  
- -- longer if we have to walk the user through a long form  
-        entry\_explanation       varchar(4000),  
- -- if they click for yet more help  
-        help\_text               varchar(4000),  
-        -- note that this does NOT translate into a "not null" constraint in Oracle  
-        -- if we did this, it would prevent users from creating rows incrementaly  
-        mandatory\_p             char(1) check (mandatory\_p in ('t','f')),  
-        -- ordering in Oracle table creation, 0 would be on top, 1 underneath, etc.  
-        sort\_key                integer,  
-        -- ordering within a form, lower number = higher on page  
-        form\_sort\_key           integer,  
-        -- if there are N forms, starting with 0, to define this object,  
- -- on which does this go?  (relevant for very complex objects where  
- -- you need more than one page to submit)  
-        form\_number             integer,  
-        -- for full text index  
-        include\_in\_ctx\_index\_p  char(1) check (include\_in\_ctx\_index\_p in ('t','f')),  
-        -- add forms should be prefilled with the default value  
-        default\_value           varchar(200),  
- check ((abstract\_data\_type not in ('user') and oracle\_data\_type is not null)  
-                or  
-              (abstract\_data\_type in ('user'))),  
-        unique(table\_name,column\_name)  
+```plaintext
+create table km_metadata_elements (
+        metadata_id             integer primary key,
+        table_name              not null references km_metadata_object_types,
+        column_name             varchar(30) not null,
+        pretty_name             varchar(100) not null,
+        abstract_data_type      varchar(30) not null,  – ie. “text” or “shorttext” “boolean” “user”
+ – this one is not null except when abstract_data_type is “user”
+        oracle_data_type        varchar(30),   – “varchar(4000)”
+        – e.g., “not null” or “check foobar in (‘christof’, ‘patrick’)”
+        extra_sql               varchar(4000),
+        – values are ‘text’, ‘textarea’, ‘select’, ‘radio’,
+ – ‘selectmultiple’, ‘checkbox’, ‘checkboxmultiple’, ‘selectsql’
+        presentation_type       varchar(100) not null,
+        – e.g., for textarea, this would be “rows=6 cols=60”, for select, Tcl list,
+        – for selectsql, an SQL query that returns N district values
+        – for email addresses mailto:
+        presentation_options    varchar(4000),
+        – pretty_name is going to be the short prompt,
+ – e.g., for an update page, but we also need something
+ – longer if we have to walk the user through a long form
+        entry_explanation       varchar(4000),
+ – if they click for yet more help
+        help_text               varchar(4000),
+        – note that this does NOT translate into a “not null” constraint in Oracle
+        – if we did this, it would prevent users from creating rows incrementaly
+        mandatory_p             char(1) check (mandatory_p in (’t',‘f’)),
+        – ordering in Oracle table creation, 0 would be on top, 1 underneath, etc.
+        sort_key                integer,
+        – ordering within a form, lower number = higher on page
+        form_sort_key           integer,
+        – if there are N forms, starting with 0, to define this object,
+ – on which does this go?  (relevant for very complex objects where
+ – you need more than one page to submit)
+        form_number             integer,
+        – for full text index
+        include_in_ctx_index_p  char(1) check (include_in_ctx_index_p in (’t',‘f’)),
+        – add forms should be prefilled with the default value
+        default_value           varchar(200),
+ check ((abstract_data_type not in (‘user’) and oracle_data_type is not null)
+                or
+              (abstract_data_type in (‘user’))),
+        unique(table_name,column_name)
 );
+```
 
 Notice that the km\_metadata\_elements table contains specifications for 1) generating the CREATE TABLE sql commands that you'll need to build the database data structures for storing knowledge and 2) building user interfaces to manipulate data in those tables.
 
 If you have trouble feeding the above table definition to SQL\*Plus running under an Emacs shell, cut and paste it into a file called "foo.sql". Then run
 
-> >  sqlplus student23/thepassword \< foo.sql
+```plaintext
+ sqlplus student23/thepassword < foo.sql
+```
 
 from the shell.
 
@@ -159,13 +164,12 @@ from the shell.
 
 Create a directory /admin/km/ under your Web server page root. Go to a Unix® shell and type
 
-> ```
+```plaintext
 > > cd /web/yourservername/www/admin/
-> > chmod a+w km
-> 
-> ```
+chmod a+w km
+```
 
-So that the /admin/km/ directory will be writable by the Web server. Now use the prototype builder (available on your own server at /admin/prototype/) to generate admin pages for the  
+So that the /admin/km/ directory will be writable by the Web server. Now use the prototype builder (available on your own server at /admin/prototype/) to generate admin pages for the     
 km\_metadata\_elements and km\_metadata\_object\_typestables.
 
 ### Exercise 2: Fill your Metadata Tables with Info
@@ -208,23 +212,25 @@ Each object table should have an object\_id column. Use a single Oracle sequence
 
 In addition to the metadata-driven object table definitions we'll define a generalized mapping table to support links between knowledge objects:
 
-create table km\_object\_object\_map (  
- table\_name\_a  not null references km\_metadata\_object\_types,  
- -- Assume all object type tables have integer primary keys.  
-        -- For a generalized mapping table we can't put an integrity  
-        -- constraint on this field.  
-        table\_id\_a  integer not null,  
-        table\_name\_b  not null references km\_metadata\_object\_types,  
-        table\_id\_b  integer not null,  
-        -- User-entered reason for relating two objects, e.g.  
-        -- to distinguish between John McCarthy the developer of  
- -- Lisp and Gerry Sussman and Guy Steele, who added lexical scoping  
-        -- in the Scheme dialect  
- map\_comment  varchar(4000),  
- creation\_user  not null references users,  
- creation\_date  date default sysdate not null,  
-        primary key (table\_name\_a, table\_id\_a, table\_name\_b, table\_id\_b)  
+```plaintext
+create table km_object_object_map (
+ table_name_a  not null references km_metadata_object_types,
+ – Assume all object type tables have integer primary keys.
+        – For a generalized mapping table we can’t put an integrity
+        – constraint on this field.
+        table_id_a  integer not null,
+        table_name_b  not null references km_metadata_object_types,
+        table_id_b  integer not null,
+        – User-entered reason for relating two objects, e.g.
+        – to distinguish between John McCarthy the developer of
+ – Lisp and Gerry Sussman and Guy Steele, who added lexical scoping
+        – in the Scheme dialect
+ map_comment  varchar(4000),
+ creation_user  not null references users,
+ creation_date  date default sysdate not null,
+        primary key (table_name_a, table_id_a, table_name_b, table_id_b)
 );
+```
 
 Notice that this table allows the users to map an object to any other object in the system, regardless of type.
 
@@ -250,39 +256,39 @@ When called with extra arguments, object-browse-one-type.tcl will pass those arg
 
 You want to know when people are looking at and reusing knowledge. Create a table to hold object views:
 
-> \-- we will be updating the reuse\_p column of views so it  
-> \-- will be easier to have a primary key  
-> create sequence km\_object\_view\_id;
-> 
-> create table km\_object\_views (  
->  object\_view\_id integer primary key,  
->  -- which user  
->  user\_id  not null references users,  
->  -- two columns to specify which object  
->  object\_id integer not null,  
->  table\_name varchar(21) not null,  
->  view\_date date not null,  
->  reuse\_p  char(1) default 'f' check(reuse\_p in ('t','f'))    
-> );
+```plaintext
+-- we will be updating the reuse_p column of views so it 
+-- will be easier to have a primary key 
+create sequence km_object_view_id;
+create table km_object_views (
+ object_view_id integer primary key,
+ – which user
+ user_id  not null references users,
+ – two columns to specify which object
+ object_id integer not null,
+ table_name varchar(21) not null,
+ view_date date not null,
+ reuse_p  char(1) default ‘f’ check(reuse_p in (’t',‘f’))  
+);
+```
 
 Modify object-view-one.tcl so that you explicitly close the TCP connection to the user (using ns\_conn close). This will stop the Netscape icon to stop spinning but the AOLserver thread will remain alive so that you can log.
 
 After the ns\_conn close, insert a row into the km\_object\_views table iff there isn't already a log row for this user/object pair within 24 hours. You could do this with a
 
-1.  Open a transaction
-2.  Lock the table
-3.  Count the number of matching rows within the last 24 hours
-4.  Compare the result to 0 and insert if necessary
-5.  Close the transaction
+1. Open a transaction
+2. Lock the table
+3. Count the number of matching rows within the last 24 hours
+4. Compare the result to 0 and insert if necessary
+5. Close the transaction
 
 However, you can also do this with a single ns\_db dml statement. Here's an example of an INSERT statement that only has an effect if there isn't already a row in the table.
 
-> ```
-> insert into msg\_id\_generator (last\_msg\_id)
-> select ('000000') from dual
-> where 0 = (select count(last\_msg\_id) from msg\_id\_generator);
-> 
-> ```
+```plaintext
+insert into msg_id_generator (last_msg_id)
+select ('000000') from dual
+where 0 = (select count(last_msg_id) from msg_id_generator);
+```
 
 Apply this idea to the problem of thread-safe logging if and only if there isn't an identical row logged within the last 24 hours.
 
@@ -310,8 +316,8 @@ Build an index of the content in the KM system objects.
 
 Create a file /admin/km/generate-sws-triggers.tcl to read the meta data tables and
 
-1.  Generate database triggers that will automatically put indexable object content into the site\_wide\_index table
-2.  Insert one row into sws\_table\_to\_section\_map for every object type defined in km\_metadata\_object\_types
+1. Generate database triggers that will automatically put indexable object content into the site\_wide\_index table
+2. Insert one row into sws\_table\_to\_section\_map for every object type defined in km\_metadata\_object\_types
 
 Add some new objects and verify that they are being automatically copied by the triggers into the index table.
 
@@ -319,12 +325,10 @@ Add some new objects and verify that they are being automatically copied by the 
 
 Create a page /km/search.tcl that displays a form letting the user search for a phrase either through all objects or only in one type of object. For /km/search-2.tcl you'll either want to use Intermedia or the DBMS\_LOB functions and the pseudo\_contains source code.
 
-{{< anchor "5" >}}{{< /anchor >}}Optional Assignment
-----------------------------------------------------
+## {{< anchor "5" >}}{{< /anchor >}}Optional Assignment
 
 Show your system to a business school professor.
 
-Who Wrote This and When
------------------------
+## Who Wrote This and When
 
 This problem set was written by Philip Greenspun in October 1999. It is copyright 1999 by him but may be reused provided credit is given to the original author.
