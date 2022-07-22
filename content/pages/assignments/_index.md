@@ -1,7 +1,15 @@
 ---
 content_type: page
+description: ''
+learning_resource_types:
+- Assignments
+ocw_type: CourseSection
 title: Assignments
 uid: 7c3bc40c-1950-1cf6-ba32-c5d48982344b
+video_files:
+  video_thumbnail_file: null
+video_metadata:
+  youtube_id: null
 ---
 
 All of the assigned problems are from the online [course textbook](http://philip.greenspun.com/seia/). Unless specified, all of the exercises in the chapter should be completed.
@@ -24,6 +32,6 @@ Problem Set 14: [User Activity Analysis](http://philip.greenspun.com/seia/user-a
 Assignments from Previous Offerings of the Course
 -------------------------------------------------
 
-[Basic db-backed Web sites, AOLserver, Tcl, SQL]({{< baseurl >}}/pages/assignments/problem_set_1)  
-[Content Management]({{< baseurl >}}/pages/assignments/problem_set_3)  
-[Metadata, Knowledge Management]({{< baseurl >}}/pages/assignments/problem_set_4)
+{{% resource_link 7f0f2453-a29c-f68c-2cf3-34d9648cc6f2 "Basic db-backed Web sites, AOLserver, Tcl, SQL" %}}  
+{{% resource_link c08018d4-d6e8-73a9-2d1d-4b60adebf465 "Content Management" %}}  
+{{% resource_link d86b9c5c-e13d-887d-9446-c7ba7d8fa527 "Metadata, Knowledge Management" %}}

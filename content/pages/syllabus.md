@@ -1,7 +1,14 @@
 ---
 content_type: page
+description: ''
+learning_resource_types: []
+ocw_type: CourseSection
 title: Syllabus
 uid: 3877035b-3171-b4fe-91a0-a2d7a17d342e
+video_files:
+  video_thumbnail_file: null
+video_metadata:
+  youtube_id: null
 ---
 
 Course Meeting Times
@@ -16,7 +23,7 @@ This is a senior-level class at MIT where we expect the average student to be wo
 
 That said, the class does not require any knowledge of particular computer languages or systems. I.e., the students will learn enough about the required tools as the course progresses.
 
-Admission to 6.171 is by permission of instructor. If you'd like to take the class, please fill out the survey ([PDF]({{< baseurl >}}/resources/survey)) and return it via email. If you are unsure about whether your preparation is adequate, a good way to find out is by simply doing the work in the [first chapter/problem set](http://philip.greenspun.com/seia/basics) and including the URL of your running system in your survey. This will reassure us of your ability to install and maintain the multiple subsystems that are, unfortunately, required to support a modern Web application.
+Admission to 6.171 is by permission of instructor. If you'd like to take the class, please fill out the survey ({{% resource_link f773da0c-ade4-e5ce-7978-59aed0815cb8 "PDF" %}}) and return it via email. If you are unsure about whether your preparation is adequate, a good way to find out is by simply doing the work in the [first chapter/problem set](http://philip.greenspun.com/seia/basics) and including the URL of your running system in your survey. This will reassure us of your ability to install and maintain the multiple subsystems that are, unfortunately, required to support a modern Web application.
 
 Description
 -----------
@@ -70,7 +77,7 @@ The mid-term is a one-week take-home exam, intended to require about 6 hours of 
 Textbooks
 ---------
 
-See the [readings]({{< baseurl >}}/pages/readings) section for more information on the required textbooks.
+See the {{% resource_link d64a6ed9-8a57-aabe-f96f-1b5c86f05ce2 "readings" %}} section for more information on the required textbooks.
 
 Adoption by Universities and Companies
 --------------------------------------

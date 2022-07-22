@@ -1,9 +1,18 @@
 ---
 content_type: page
+description: ''
+learning_resource_types:
+- Exams
+ocw_type: CourseSection
 parent_title: Exams
+parent_type: CourseSection
 parent_uid: 3cf8bdea-1d49-826e-cbfd-ddc07baf1318
 title: Spring 2000 Midterm Exam
 uid: d78d4564-ed8e-a513-d6d2-c9e9a71ff5fa
+video_files:
+  video_thumbnail_file: null
+video_metadata:
+  youtube_id: null
 ---
 
 Rules
