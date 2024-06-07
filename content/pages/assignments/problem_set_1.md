@@ -1,6 +1,9 @@
 ---
 content_type: page
-description: ''
+description: 'This first problem set requires you to learn a lot of new software,
+  so make sure you get started early: plan to spend at least two or three sessions
+  on it. There is nothing difficult here, but we do want to lead you through the mechanics
+  of using Tcl, SQL, and running the Web server.'
 draft: false
 learning_resource_types:
 - Assignments
@@ -21,11 +24,11 @@ File decompression software, such as [Winzip®](http://www.winzip.com/) or [St
 
 - [Philip and Alex's Guide to Web Publishing](http://philip.greenspun.com/panda/?). Chapters 1, 4, 5, 10 and 11.
 - [SQL for Web Nerds](http://philip.greenspun.com/sql/). Chapters 1-9.
-- [Tcl for Web Nerds](http://philip.greenspun.com/tcl/) and/or _Practical Programming in Tcl and Tk_ (Brent Welch 1997; Prentice-Hall), all the chapters up until the Tk stuff and/or the Tcl 8.2 main pages.
+- [Tcl for Web Nerds](http://philip.greenspun.com/tcl/) and/or *Practical Programming in Tcl and Tk* (Brent Welch 1997; Prentice-Hall), all the chapters up until the Tk stuff and/or the Tcl 8.2 main pages.
 - Introduction to AOLserver: [Part 1](http://philip.greenspun.com/wtr/aolserver/introduction-1) and [Part 2](http://philip.greenspun.com/wtr/aolserver/introduction-2).
-- Reference: [_Using the LCS Web/db Computing Facility_](http://philip.greenspun.com/teaching/manuals/usermanual/).
+- Reference: [*Using the LCS Web/db Computing Facility*](http://philip.greenspun.com/teaching/manuals/usermanual/).
 
-Helper and example files (if you're not doing this at MIT): 6916.ps1.tar ({{% resource_link d8238c85-463a-e0ce-4542-ed92c431f46f "TAR" %}}) (This .tar file includes 1 .txt, 2 .adp, 1 .csv, 10 .tcl files.)
+Helper and example files (if you're not doing this at MIT): 6916.ps1.tar ({{% resource_link "d8238c85-463a-e0ce-4542-ed92c431f46f" "TAR" %}}) (This .tar file includes 1 .txt, 2 .adp, 1 .csv, 10 .tcl files.)
 
 ## Objectives
 
@@ -46,21 +49,21 @@ We're trying to make sure that everyone knows:
 
 This first problem set requires you to learn a lot of new software, so make sure you get started early: plan to spend at least two or three sessions on it. There is nothing difficult here, but we do want to lead you through the mechanics of using Tcl, SQL, and running the Web server.
 
-[Getting Started with Tcl](#1)     
-[Getting Started with SQL\*Plus](#2)     
-[Working with AOLserver and Oracle](#3)     
-[Personalizing Web Services with Cookies](#4)     
-[Sharing Data with XML](#5)     
-[The Wide World of Oracle](#6)     
+[Getting Started with Tcl](#1)      
+[Getting Started with SQL\*Plus](#2)      
+[Working with AOLserver and Oracle](#3)      
+[Personalizing Web Services with Cookies](#4)      
+[Sharing Data with XML](#5)      
+[The Wide World of Oracle](#6)      
 [Information Architecture and User Interface](#7)
 
 ## {{< anchor "1" >}}{{< /anchor >}}Getting Started with Tcl
 
-Start by reading _Using the LCS Web/db Computing Facility_ and following its instructions to log into your server machine.
+Start by reading *Using the LCS Web/db Computing Facility* and following its instructions to log into your server machine.
 
 ### Exercise 1: Running Tcl from the Shell
 
-Run Emacs. Type "m-x shell" to get a Unix® shell. Type "tclsh" to start the Tcl shell program. Define a _recursive_ Fibonacci procedure in Tcl. Execute and test.
+Run Emacs. Type "m-x shell" to get a Unix® shell. Type "tclsh" to start the Tcl shell program. Define a *recursive* Fibonacci procedure in Tcl. Execute and test.
 
 Hint: If you're writing Tcl programs of more than two or three lines, you may find it convenient to type the code into a separate Emacs buffer (set to tcl mode) and cut and paste from there into the Tcl shell buffer.
 
@@ -68,13 +71,13 @@ Type info tclversion at the tclsh prompt to make sure that you're running Tcl 8
 
 ### Exercise 2: Running Tcl from an (almost) HTML Page
 
-Look at two-plus-two.adp ([HTM]({{< baseurl >}}/pages/assignments/twoplustwo.htm)) source ([TXT](/courses/electrical-engineering-and-computer-science/6-171-software-engineering-for-web-applications-fall-2003/assignments/twoplustwoadp.txt)). This is an example of the ADP templating facility in AOLserver.
+Look at two-plus-two.adp (\[HTM\]({{< baseurl >}}/pages/assignments/twoplustwo.htm)) source ([TXT](/courses/electrical-engineering-and-computer-science/6-171-software-engineering-for-web-applications-fall-2003/assignments/twoplustwoadp.txt)). This is an example of the ADP templating facility in AOLserver.
 
 Augment the page so that (1) you add a $4000 South American Cichlid aquarium as an option, (2) you use a constructor procedure to build each aquarium element (instead of simply calling list), (3) you add an element to the aquarium for how many of each type of aquarium will be installed (4) you use procedures to extract type, cost and quantity from an aquarium element (instead of simply calling lindex), (5) you print out quantity-dependent subtotals and the grand total at the bottom.
 
 ### Exercise 3: Simple Tcl Pages
 
-Using the Web browser running on your local machine, visit the URL [http://yourvirtualserver/psets/ps1/simple-tcl-page.tcl](http://yourvirtualserver/psets/ps1/simple-tcl-page.tcl). Using Emacs running on the server machine, examine the source code for this page in /web/yourvirtualserver/www/psets/ps1/simple-tcl-page.tcl. Also look at the source code for the target of the form in /web/yourvirtualserver/psets/ps1/simple-tcl-page-2.tcl. (If these files are missing, download them from 6916.ps1.tar ({{% resource_link d8238c85-463a-e0ce-4542-ed92c431f46f "TAR" %}}) (This .tar file includes 1 .txt, 2 .adp, 1 .csv, 10 .tcl files.) and put them in /web/yourvirtualserver/www). Notice how we use Tcl to read the form variables. Try out the form a couple of times, using your browser. Now debug the regular expression in simple-tcl-page-2.tcl so that it properly handles the names "Tammy Faye Baker" and "William H. Gates III".
+Using the Web browser running on your local machine, visit the URL http://yourvirtualserver/psets/ps1/simple-tcl-page.tcl. Using Emacs running on the server machine, examine the source code for this page in /web/yourvirtualserver/www/psets/ps1/simple-tcl-page.tcl. Also look at the source code for the target of the form in /web/yourvirtualserver/psets/ps1/simple-tcl-page-2.tcl. (If these files are missing, download them from 6916.ps1.tar ({{% resource_link "d8238c85-463a-e0ce-4542-ed92c431f46f" "TAR" %}}) (This .tar file includes 1 .txt, 2 .adp, 1 .csv, 10 .tcl files.) and put them in /web/yourvirtualserver/www). Notice how we use Tcl to read the form variables. Try out the form a couple of times, using your browser. Now debug the regular expression in simple-tcl-page-2.tcl so that it properly handles the names "Tammy Faye Baker" and "William H. Gates III".
 
 Hint 1: it is easier if you don't try to do this in one regexp. Use if then elseif then elseif …
 
@@ -109,13 +112,13 @@ Note that you have to end your SQL commands with a semicolon in SQL\*Plus. These
 Insert a few rows, e.g.,
 
 ```plaintext
-insert into my_courses (course_number) values ('6.916');   
+insert into my_courses (course_number) values ('6.916');&nbsp;&nbsp; 
 ```
 
 Commit your changes:
 
 ```plaintext
-commit;   
+commit;&nbsp;&nbsp; 
 ```
 
 See what you've got:
@@ -138,7 +141,7 @@ Look at the file /web/yourvirtualserver/www/psets/ps1/quotations.tcl, which is t
 
 To get AOLserver to load procedure definitions at server startup, you have to put .tcl files in your server's private Tcl library: /web/yourvirtualserver/tcl/. Create a file called "ps1-defs.tcl" in this directory and define the following Tcl procedures:
 
-ad\_header _page\_title_ -- returns HTML, HEAD, TITLE, and BODY tags, with argument enclosed within the TITLE tags
+ad\_header *page\_title* -- returns HTML, HEAD, TITLE, and BODY tags, with argument enclosed within the TITLE tags
 
 ad\_footer -- returns a string that will close the BODY and HTML tags
 
@@ -160,7 +163,7 @@ Now it is time to preload your quotations database with some interesting materia
 
 ## {{< anchor "3" >}}{{< /anchor >}}Working with AOLserver and Oracle
 
-Let's look at how to access the database from Tcl programs. The basic idea is that AOLServer includes a data abstraction called a _set_, defined by the operations listed under the ns\_set API. A set is a collection of (key,value) pairs, which should be a familar idea from [6.001](/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005). Selecting from a table with ns\_db select returns an identifier for a set, whose keys are the names of the selected columns. Subsequent successive calls with ns\_db getrow will fill in the values in this set with the values from successive selected rows. For example, suppose you obtain a set identifier by selecting the following table with ns\_select:
+Let's look at how to access the database from Tcl programs. The basic idea is that AOLServer includes a data abstraction called a *set*, defined by the operations listed under the ns\_set API. A set is a collection of (key,value) pairs, which should be a familar idea from [6.001](/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005). Selecting from a table with ns\_db select returns an identifier for a set, whose keys are the names of the selected columns. Subsequent successive calls with ns\_db getrow will fill in the values in this set with the values from successive selected rows. For example, suppose you obtain a set identifier by selecting the following table with ns\_select:
 
 {{< tableopen >}}{{< theadopen >}}{{< tropen >}}{{< thopen >}}
 WRITERS
@@ -169,15 +172,15 @@ BOOKS
 {{< thclose >}}{{< trclose >}}{{< theadclose >}}{{< tbodyopen >}}{{< tropen >}}{{< tdopen >}}
 Tolstoy
 {{< tdclose >}}{{< tdopen >}}
-_Anna Karenina_
+*Anna Karenina*
 {{< tdclose >}}{{< trclose >}}{{< tropen >}}{{< tdopen >}}
 Steinbeck
 {{< tdclose >}}{{< tdopen >}}
-_Grapes of Wrath_
+*Grapes of Wrath*
 {{< tdclose >}}{{< trclose >}}{{< tropen >}}{{< tdopen >}}
 Greenspun
 {{< tdclose >}}{{< tdopen >}}
-_Guide to Web Publishing_
+*Guide to Web Publishing*
 {{< tdclose >}}{{< trclose >}}{{< tbodyclose >}}{{< tableclose >}}
 
 Then, after the first call to ns\_db getrow the set will be
@@ -241,7 +244,7 @@ After the browser has accepted a server's cookie, it will include the cookie nam
 
 After the expiration date, the browser no longer sends the cookie information. The server can also issue cookies with no specified expiration date, in which case, the cookie is not persistent -- the browser uses it only for that one session.
 
-You can see an example of how cookies are issued and read, by visiting the URL [http://yourvirtualserver/psets/ps1/set-cookies.tcl](http://yourvirtualserver/psets/ps1/set-cookies.tcl) and examining the Tcl for file and the associated URLs check-cookies.tcl and expire-cookies.tcl. Observe how expire-cookies gets rid of cookies by reissuing them with an expiration date that has already past.
+You can see an example of how cookies are issued and read, by visiting the URL http://yourvirtualserver/psets/ps1/set-cookies.tcl and examining the Tcl for file and the associated URLs check-cookies.tcl and expire-cookies.tcl. Observe how expire-cookies gets rid of cookies by reissuing them with an expiration date that has already past.
 
 Reference: The magic cookie spec is available from [Persistent Client State HTTP Cookies](http://curl.haxx.se/rfc/cookie_spec.html).
 
@@ -351,7 +354,7 @@ Write a program to import a quotations database from another student's XML outpu
 
 Hints: You might want to set up a temporary table using create table quotations\_temp as select \* from quotations and then drop it after you're done debugging. You should use DoubleApos when presenting data to Oracle for comparisons.
 
-Rather than having you link in a 100,000-line C program (or a 5,000-line Lisp program) that parses XML documents based on a DTD, we've gone for simplicity here by predefining for you a parser in Tcl that understands only this particular DTD for quotations. The procedure is parse\_all ([TXT](/courses/electrical-engineering-and-computer-science/6-171-software-engineering-for-web-applications-fall-2003/assignments/parseall.txt)) (you have to install this file in your server's private Tcl library, /web/yourvirtualserver/tcl/, for this function to be callable by .tcl and .adp pages) . The parse\_all proc takes an XML quotation structure as argument and returns a Tcl list, showing the parts and subparts of the structure. To see an example of the format, use your browser to visit the page [http://yourvirtualserver/psets/ps1/xml-parse-test.tcl](http://yourvirtualserver/psets/ps1/xml-parse-test.tcl).
+Rather than having you link in a 100,000-line C program (or a 5,000-line Lisp program) that parses XML documents based on a DTD, we've gone for simplicity here by predefining for you a parser in Tcl that understands only this particular DTD for quotations. The procedure is parse\_all ([TXT](/courses/electrical-engineering-and-computer-science/6-171-software-engineering-for-web-applications-fall-2003/assignments/parseall.txt)) (you have to install this file in your server's private Tcl library, /web/yourvirtualserver/tcl/, for this function to be callable by .tcl and .adp pages) . The parse\_all proc takes an XML quotation structure as argument and returns a Tcl list, showing the parts and subparts of the structure. To see an example of the format, use your browser to visit the page http://yourvirtualserver/psets/ps1/xml-parse-test.tcl.
 
 Note: these exercises are designed to familiarize you with XML. In most cases, sophisticated XML processing should be done inside Oracle using Java® libraries.
 
@@ -416,11 +419,11 @@ Modify your statement to use an OUTER JOIN instead so that you'll get a complete
 
 Inspired by Wall Street's methods for valuing Internet companies, we've developed our own valuation method for this problem set: a stock is valued at the sum of the ascii characters making up its symbol. (Note that students who've used lowercase letters to represent symbols will have higher-valued portfolios than those will all-uppercase symbols; "IBM" is worth only $216 whereas "ibm" is worth $312!)
 
-- define a PL/SQL _function_ that takes a trading symbol as its argument and returns the stock value (hint: Oracle's built-in ASCII function will be helpful)
+- define a PL/SQL *function* that takes a trading symbol as its argument and returns the stock value (hint: Oracle's built-in ASCII function will be helpful)
 - with a single UPDATE statement, update stock\_prices to set each stock's value to whatever is returned by this PL/SQL procedure
 - define a PL/SQL function that takes no arguments and returns the aggregate value of the portfolio (n\_shares \* price for each stock). You'll want to define your JOIN from Oraexercise 3 (above) as a cursor and then use the PL/SQL Cursor FOR LOOP facility. Hint: when you're all done, you can run this procedure from SQL\*Plus with select portfolio\_value() from dual;.
 
-SQL\*Plus Tip: though it is not part of the SQL language, you will find it very useful to type "/" after your PL/SQL definitions if you're feeding them to Oracle via the SQL\*Plus application. Unless you write perfect code, you'll also want to know about the SQL\*Plus command "show errors". For exposure to the full range of this kind of obscurantism, see the _SQL\*Plus User's Guide and Reference_.
+SQL\*Plus Tip: though it is not part of the SQL language, you will find it very useful to type "/" after your PL/SQL definitions if you're feeding them to Oracle via the SQL\*Plus application. Unless you write perfect code, you'll also want to know about the SQL\*Plus command "show errors". For exposure to the full range of this kind of obscurantism, see the *SQL\*Plus User's Guide and Reference*.
 
 ### Oraexercise 6: Buy More of the Winners
 
@@ -433,7 +436,7 @@ Rerun your query from Oraexercise 4. Note that in some cases you will have two r
 
 - use a SELECT … GROUP BY query from my\_stocks to produce a report of symbols and total shares held
 - use a SELECT .. GROUP BY query JOINing with stock\_prices to produce a report of symbols and total value held per symbol
-- use a SELECT .. GROUP BY .. HAVING query to produce a report of symbols, total shares held, and total value held per symbol _restricted to symbols in which you have at least two blocks of shares_ (i.e., the "winners")
+- use a SELECT .. GROUP BY .. HAVING query to produce a report of symbols, total shares held, and total value held per symbol *restricted to symbols in which you have at least two blocks of shares* (i.e., the "winners")
 
 ### Oraexercise 7: Encapsulate your Queries with a View
 
