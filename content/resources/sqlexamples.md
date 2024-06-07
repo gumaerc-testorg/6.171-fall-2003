@@ -2,6 +2,7 @@
 content_type: resource
 description: ''
 file: /courses/6-171-software-engineering-for-web-applications-fall-2003/c959ae5a3ac117c1b58dcd9340ab3f85_sqlexamples.txt
+file_size: 2095
 file_type: text/plain
 learning_resource_types: []
 license: https://creativecommons.org/licenses/by-nc-sa/4.0/
