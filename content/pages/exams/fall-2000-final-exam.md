@@ -1,6 +1,6 @@
 ---
 content_type: page
-description: ''
+description: Final exam questions and rules.
 draft: false
 learning_resource_types:
 - Exams
@@ -100,9 +100,9 @@ Spend another three minutes surfing around the [Carnival](http://www.carnival.co
 
 What could Carnival have done to give you a better answer to your question? A better feel for life on board their ships? Could collaborative authorship play a role? Sketch how this could be done. (Expected length of answer: 1 or 2 paragraphs.)
 
-Question 2c
+### Question 2c
 
-Critique the user interface of gay.com's Q&A forum software. If you wish, you may do this in the form of a pluses and minuses comparison to the standard ACS forum software (see the [photo.net forums](http://photo.net/community/) for a richly populated archive). Expected length of answer: 2 paragraphs.
+Critique the user interface of gay.com's Q&A forum software. If you wish, you may do this in the form of a pluses and minuses comparison to the standard ACS forum software. Expected length of answer: 2 paragraphs.
 
 Visit the PlanetOut site (CEO is MIT Course 2 graduate Megan Smith) and search for "Carnival cruise". Look at enough results to figure out whether or not Carnival is gay-friendly. Google for the search string "Carnival cruise gay". Again, look at enough results to figure out whether or not Carnival is gay-friendly.
 
@@ -134,7 +134,7 @@ Explain the concurrency problem that arises when two copies of this program are 
 > 
 > Percentage of convicted criminals who say they would do this: 60%
 > 
-> \-- _Wall Street Journal_, May 3rd 1999
+> \-- *Wall Street Journal*, May 3rd 1999
 
 It takes more than engineering to make a successful Web service. Pick your partners carefully.
 
