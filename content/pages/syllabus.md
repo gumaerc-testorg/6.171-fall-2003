@@ -20,7 +20,7 @@ Lectures: 2 sessions / week, 1.5 hours / session
 
 ## Prerequisites
 
-This is a senior-level class at MIT where we expect the average student to be working on a bachelor's or master's degree in computer science, to have taken our introduction to computer science ([6.001](https://ocw-studio.odl.mit.edu/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005)), to have taken our core software engineering class ([6.170](https://ocw-studio.odl.mit.edu/courses/6-170-laboratory-in-software-engineering-fall-2005)), and to have done at least some programming during summer jobs.
+This is a senior-level class at MIT where we expect the average student to be working on a bachelor's or master's degree in computer science, to have taken our introduction to computer science ([6.001](https://ocw.mit.edu/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005/)), to have taken our core software engineering class ([6.170](https://ocw.mit.edu/courses/6-170-laboratory-in-software-engineering-fall-2005/)), and to have done at least some programming during summer jobs.
 
 That said, the class does not require any knowledge of particular computer languages or systems. I.e., the students will learn enough about the required tools as the course progresses.
 
@@ -111,11 +111,11 @@ Bottom line: about 1000 CS majors have gone through this curriculum and all but 
 
 Here are some examples of good things have happened in or because of 6.916/6.171:
 
-- From Spring 1999    
+- From Spring 1999     
     The image sharing service at [photo.net](http://www.photo.net/gallery/) was developed in Spring 1999 by a student team. The system continues to run on the public Internet and permits nearly 300,000 to share and comment on uploaded photographs.
-- From Fall 1999    
+- From Fall 1999     
     Camfield Estates continues to serve the residents of a public housing project in inner-city Boston (see the [background](https://link.springer.com/chapter/10.1007%2F3-540-45636-8_9) on this project by Randal D. Pinkett, a Media Lab graduate student)
-- From Fall 2000    
+- From Fall 2000     
     MIT UPV is online and providing an international cultural exchange for hundreds of students at MIT and Valencia, as described in this [WIRED magazine article](http://www.wired.com/category/magazine/).
 
 A reasonably complete list of old projects is [available](https://philip.greenspun.com/seia/writeup). In addition to continuing public sites, 6.916/6.171 has also produced a few startup companies as students who took the course together continued their collaboration in industry. (Of course, that was in the go-go years of the Internet; now most of the students graduate and take jobs at IBM, Microsoft, and Oracle.)
