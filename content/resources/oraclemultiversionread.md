@@ -1,7 +1,7 @@
 ---
 content_type: resource
 description: ''
-file: /courses/6-171-software-engineering-for-web-applications-fall-2003/703b3243262cccc1be17b5274222edb0_oraclemultiversionread.gif
+file: /ol-ocw-studio-app/courses/6-171-software-engineering-for-web-applications-fall-2003/703b3243262cccc1be17b5274222edb0_oraclemultiversionread.gif
 file_size: 22327
 file_type: image/gif
 image_metadata:
