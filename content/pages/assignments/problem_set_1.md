@@ -18,7 +18,7 @@ video_files:
 video_metadata:
   youtube_id: null
 ---
-File decompression software, such as [Winzip®](http://www.winzip.com/) or [StuffIt®](https://my.smithmicro.com/stuffit-expander-mac.html#), is required to open the .tar files in this section. Any number of software tools can be used to import the .csv files in this section.
+File decompression software, such as [Winzip®](http://www.winzip.com/) or [StuffIt®](https://stuffit.com/), is required to open the .tar files in this section. Any number of software tools can be used to import the .csv files in this section.
 
 ## Reading for This Week
 
@@ -49,13 +49,13 @@ We're trying to make sure that everyone knows:
 
 This first problem set requires you to learn a lot of new software, so make sure you get started early: plan to spend at least two or three sessions on it. There is nothing difficult here, but we do want to lead you through the mechanics of using Tcl, SQL, and running the Web server.
 
-[Getting Started with Tcl](#1)      
-[Getting Started with SQL\*Plus](#2)      
-[Working with AOLserver and Oracle](#3)      
-[Personalizing Web Services with Cookies](#4)      
-[Sharing Data with XML](#5)      
-[The Wide World of Oracle](#6)      
-[Information Architecture and User Interface](#7)
+[Getting Started with Tcl](https://ocw-studio.odl.mit.edu/sites/6-171-software-engineering-for-web-applications-fall-2003/type/page/edit/7f0f2453-a29c-f68c-2cf3-34d9648cc6f2/?q=Basic#1)       
+[Getting Started with SQL\*Plus](https://ocw-studio.odl.mit.edu/sites/6-171-software-engineering-for-web-applications-fall-2003/type/page/edit/7f0f2453-a29c-f68c-2cf3-34d9648cc6f2/?q=Basic#2)       
+[Working with AOLserver and Oracle](https://ocw-studio.odl.mit.edu/sites/6-171-software-engineering-for-web-applications-fall-2003/type/page/edit/7f0f2453-a29c-f68c-2cf3-34d9648cc6f2/?q=Basic#3)       
+[Personalizing Web Services with Cookies](https://ocw-studio.odl.mit.edu/sites/6-171-software-engineering-for-web-applications-fall-2003/type/page/edit/7f0f2453-a29c-f68c-2cf3-34d9648cc6f2/?q=Basic#4)       
+[Sharing Data with XML](https://ocw-studio.odl.mit.edu/sites/6-171-software-engineering-for-web-applications-fall-2003/type/page/edit/7f0f2453-a29c-f68c-2cf3-34d9648cc6f2/?q=Basic#5)       
+[The Wide World of Oracle](https://ocw-studio.odl.mit.edu/sites/6-171-software-engineering-for-web-applications-fall-2003/type/page/edit/7f0f2453-a29c-f68c-2cf3-34d9648cc6f2/?q=Basic#6)       
+[Information Architecture and User Interface](https://ocw-studio.odl.mit.edu/sites/6-171-software-engineering-for-web-applications-fall-2003/type/page/edit/7f0f2453-a29c-f68c-2cf3-34d9648cc6f2/?q=Basic#7)
 
 ## {{< anchor "1" >}}{{< /anchor >}}Getting Started with Tcl
 
@@ -71,13 +71,13 @@ Type info tclversion at the tclsh prompt to make sure that you're running Tcl 8
 
 ### Exercise 2: Running Tcl from an (almost) HTML Page
 
-Look at two-plus-two.adp (\[HTM\]({{< baseurl >}}/pages/assignments/twoplustwo.htm)) source ([TXT](/courses/electrical-engineering-and-computer-science/6-171-software-engineering-for-web-applications-fall-2003/assignments/twoplustwoadp.txt)). This is an example of the ADP templating facility in AOLserver.
+Look at two-plus-two.adp (\[HTM\]({{< baseurl >}}/pages/assignments/twoplustwo.htm)) source ([TXT](https://ocw-studio.odl.mit.edu/courses/electrical-engineering-and-computer-science/6-171-software-engineering-for-web-applications-fall-2003/assignments/twoplustwoadp.txt)). This is an example of the ADP templating facility in AOLserver.
 
 Augment the page so that (1) you add a $4000 South American Cichlid aquarium as an option, (2) you use a constructor procedure to build each aquarium element (instead of simply calling list), (3) you add an element to the aquarium for how many of each type of aquarium will be installed (4) you use procedures to extract type, cost and quantity from an aquarium element (instead of simply calling lindex), (5) you print out quantity-dependent subtotals and the grand total at the bottom.
 
 ### Exercise 3: Simple Tcl Pages
 
-Using the Web browser running on your local machine, visit the URL http://yourvirtualserver/psets/ps1/simple-tcl-page.tcl. Using Emacs running on the server machine, examine the source code for this page in /web/yourvirtualserver/www/psets/ps1/simple-tcl-page.tcl. Also look at the source code for the target of the form in /web/yourvirtualserver/psets/ps1/simple-tcl-page-2.tcl. (If these files are missing, download them from 6916.ps1.tar ({{% resource_link "d8238c85-463a-e0ce-4542-ed92c431f46f" "TAR" %}}) (This .tar file includes 1 .txt, 2 .adp, 1 .csv, 10 .tcl files.) and put them in /web/yourvirtualserver/www). Notice how we use Tcl to read the form variables. Try out the form a couple of times, using your browser. Now debug the regular expression in simple-tcl-page-2.tcl so that it properly handles the names "Tammy Faye Baker" and "William H. Gates III".
+Using the Web browser running on your local machine, visit the URL [http://yourvirtualserver/psets/ps1/simple-tcl-page.tcl](http://yourvirtualserver/psets/ps1/simple-tcl-page.tcl). Using Emacs running on the server machine, examine the source code for this page in /web/yourvirtualserver/www/psets/ps1/simple-tcl-page.tcl. Also look at the source code for the target of the form in /web/yourvirtualserver/psets/ps1/simple-tcl-page-2.tcl. (If these files are missing, download them from 6916.ps1.tar ({{% resource_link "d8238c85-463a-e0ce-4542-ed92c431f46f" "TAR" %}}) (This .tar file includes 1 .txt, 2 .adp, 1 .csv, 10 .tcl files.) and put them in /web/yourvirtualserver/www). Notice how we use Tcl to read the form variables. Try out the form a couple of times, using your browser. Now debug the regular expression in simple-tcl-page-2.tcl so that it properly handles the names "Tammy Faye Baker" and "William H. Gates III".
 
 Hint 1: it is easier if you don't try to do this in one regexp. Use if then elseif then elseif …
 
@@ -87,7 +87,7 @@ Hint 2: regexp has a side-effect. If you use a multi-clause if statement, make s
 
 Using the Web browser running on your local machine, visit the [Seeq](https://www.seeq.com/). Read the discussion of this program in [Chapter 10](http://philip.greenspun.com/panda/server-programming?) of Philip and Alex's Guide to Web Publishing. Drawing upon that program as a model, build a new web service that takes the ISBN of a book from a form and then uses ns\_httpget to query several online bookstores to find price and stock information and displays the results in an HTML table. Save your program in files called /web/yourvirtualserver/www/psets/ps1/books.tcl and books-2.tcl so people can access your service over the web.
 
-We suggest querying wordsworth.com, barnesandnoble.com, and [www.1bookstreet.com](http://www.1bookstreet.com) (amazon.com tends to respond with a 302 redirect you if the client doesn't give them a session ID in the query). Your program should be robust to timeouts, errors at the foreign sites, and network problems. You can ensure this by wrapping a Tcl catch statement around your call to ns\_httpget. Test your program with the following ISBNs: 0385494238, 0062514792, 0140260404, 0679762906.
+We suggest querying wordsworth.com, barnesandnoble.com, and [www.1bookstreet.com](http://www.1bookstreet.com/) (amazon.com tends to respond with a 302 redirect you if the client doesn't give them a session ID in the query). Your program should be robust to timeouts, errors at the foreign sites, and network problems. You can ensure this by wrapping a Tcl catch statement around your call to ns\_httpget. Test your program with the following ISBNs: 0385494238, 0062514792, 0140260404, 0679762906.
 
 Extra credit: From which of the preceding books is the following quote taken?
 
@@ -163,7 +163,7 @@ Now it is time to preload your quotations database with some interesting materia
 
 ## {{< anchor "3" >}}{{< /anchor >}}Working with AOLserver and Oracle
 
-Let's look at how to access the database from Tcl programs. The basic idea is that AOLServer includes a data abstraction called a *set*, defined by the operations listed under the ns\_set API. A set is a collection of (key,value) pairs, which should be a familar idea from [6.001](/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005). Selecting from a table with ns\_db select returns an identifier for a set, whose keys are the names of the selected columns. Subsequent successive calls with ns\_db getrow will fill in the values in this set with the values from successive selected rows. For example, suppose you obtain a set identifier by selecting the following table with ns\_select:
+Let's look at how to access the database from Tcl programs. The basic idea is that AOLServer includes a data abstraction called a *set*, defined by the operations listed under the ns\_set API. A set is a collection of (key,value) pairs, which should be a familar idea from [6.001](https://ocw-studio.odl.mit.edu/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005). Selecting from a table with ns\_db select returns an identifier for a set, whose keys are the names of the selected columns. Subsequent successive calls with ns\_db getrow will fill in the values in this set with the values from successive selected rows. For example, suppose you obtain a set identifier by selecting the following table with ns\_select:
 
 {{< tableopen >}}{{< theadopen >}}{{< tropen >}}{{< thopen >}}
 WRITERS
@@ -244,7 +244,7 @@ After the browser has accepted a server's cookie, it will include the cookie nam
 
 After the expiration date, the browser no longer sends the cookie information. The server can also issue cookies with no specified expiration date, in which case, the cookie is not persistent -- the browser uses it only for that one session.
 
-You can see an example of how cookies are issued and read, by visiting the URL http://yourvirtualserver/psets/ps1/set-cookies.tcl and examining the Tcl for file and the associated URLs check-cookies.tcl and expire-cookies.tcl. Observe how expire-cookies gets rid of cookies by reissuing them with an expiration date that has already past.
+You can see an example of how cookies are issued and read, by visiting the URL [http://yourvirtualserver/psets/ps1/set-cookies.tcl](http://yourvirtualserver/psets/ps1/set-cookies.tcl) and examining the Tcl for file and the associated URLs check-cookies.tcl and expire-cookies.tcl. Observe how expire-cookies gets rid of cookies by reissuing them with an expiration date that has already past.
 
 Reference: The magic cookie spec is available from [Persistent Client State HTTP Cookies](http://curl.haxx.se/rfc/cookie_spec.html).
 
@@ -354,7 +354,7 @@ Write a program to import a quotations database from another student's XML outpu
 
 Hints: You might want to set up a temporary table using create table quotations\_temp as select \* from quotations and then drop it after you're done debugging. You should use DoubleApos when presenting data to Oracle for comparisons.
 
-Rather than having you link in a 100,000-line C program (or a 5,000-line Lisp program) that parses XML documents based on a DTD, we've gone for simplicity here by predefining for you a parser in Tcl that understands only this particular DTD for quotations. The procedure is parse\_all ([TXT](/courses/electrical-engineering-and-computer-science/6-171-software-engineering-for-web-applications-fall-2003/assignments/parseall.txt)) (you have to install this file in your server's private Tcl library, /web/yourvirtualserver/tcl/, for this function to be callable by .tcl and .adp pages) . The parse\_all proc takes an XML quotation structure as argument and returns a Tcl list, showing the parts and subparts of the structure. To see an example of the format, use your browser to visit the page http://yourvirtualserver/psets/ps1/xml-parse-test.tcl.
+Rather than having you link in a 100,000-line C program (or a 5,000-line Lisp program) that parses XML documents based on a DTD, we've gone for simplicity here by predefining for you a parser in Tcl that understands only this particular DTD for quotations. The procedure is parse\_all ([TXT](https://ocw-studio.odl.mit.edu/courses/electrical-engineering-and-computer-science/6-171-software-engineering-for-web-applications-fall-2003/assignments/parseall.txt)) (you have to install this file in your server's private Tcl library, /web/yourvirtualserver/tcl/, for this function to be callable by .tcl and .adp pages) . The parse\_all proc takes an XML quotation structure as argument and returns a Tcl list, showing the parts and subparts of the structure. To see an example of the format, use your browser to visit the page [http://yourvirtualserver/psets/ps1/xml-parse-test.tcl](http://yourvirtualserver/psets/ps1/xml-parse-test.tcl).
 
 Note: these exercises are designed to familiarize you with XML. In most cases, sophisticated XML processing should be done inside Oracle using Java® libraries.
 
