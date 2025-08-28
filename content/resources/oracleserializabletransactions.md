@@ -1,7 +1,7 @@
 ---
 content_type: resource
 description: ''
-file: /courses/6-171-software-engineering-for-web-applications-fall-2003/2a1d77366cb309f70fd6bd2ebe6ba73f_oracleserializabletransactions.gif
+file: /ol-ocw-studio-app/courses/6-171-software-engineering-for-web-applications-fall-2003/2a1d77366cb309f70fd6bd2ebe6ba73f_oracleserializabletransactions.gif
 file_size: 56900
 file_type: image/gif
 image_metadata:
