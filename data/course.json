@@ -45,11 +45,12 @@
     "website": "6-171-software-engineering-for-web-applications-fall-2003"
   },
   "learning_resource_types": [
-    "Online Textbook",
+    "Open Textbooks",
     "Exams",
     "Design Assignments"
   ],
   "site_uid": "8f12bb69-01c5-46e2-b872-e82805f08e12",
   "site_short_id": "6.171-fall-2003",
+  "site_url_path": "courses/6-171-software-engineering-for-web-applications-fall-2003",
   "title": "Course Metadata"
 }
