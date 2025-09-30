@@ -11,7 +11,7 @@ video_files:
 video_metadata:
   youtube_id: null
 ---
-The assignment due dates listed below refer to exercises from the online course textbook, [Internet Application Workbook](https://philip.greenspun.com/seia/).
+The assignment due dates listed below refer to exercises from the online course textbook, {{% resource_link "eeb69098-14bc-4462-afe1-ee75f6878f34" "Internet Application Workbook" %}}.
 
 {{< tableopen >}}{{< theadopen >}}{{< tropen >}}{{< thopen >}}
 LEC #
@@ -59,7 +59,7 @@ Basics Exercises Due
 4
 {{< tdclose >}}{{< tdopen >}}
 
-Data Modelling: Airline Example ([TXT](https://ocw-studio.odl.mit.edu/courses/electrical-engineering-and-computer-science/6-171-software-engineering-for-web-applications-fall-2003/calendar/airlinereservationsystem.txt))
+Data Modelling: Airline Example ({{% resource_link "cf62eb76-1ef9-4b5b-becd-65af16ce6a41" "TXT" %}})
 
 Improving Query Performance with RDBMS B-tree Indices ({{% resource_link "88f1daa8-e775-96a2-ba9e-0ac980e053ba" "GIF" %}})
 
@@ -84,7 +84,7 @@ User Registration and Management Exercises Due
 Team Presentations and Discussion
 
 Data Model Normalization and Third Normal Form:   
-Make sure you've read the normal form sections in the Content Management chapter and maybe [this SQL for Web Nerds chapter](http://philip.greenspun.com/sql/normalization). We'll be taking apart this table ({{% resource_link "0eea5708-ba07-6d33-9159-37e2153bad88" "TXT" %}}) for supporting an MP3 sharing service.
+Make sure you've read the normal form sections in the Content Management chapter and maybe {{% resource_link "2a0d2d67-bdef-47f1-b686-7896e0fc8cc2" "this SQL for Web Nerds chapter" %}}. We'll be taking apart this table ({{% resource_link "0eea5708-ba07-6d33-9159-37e2153bad88" "TXT" %}}) for supporting an MP3 sharing service.
 
 {{< tdclose >}}{{< tdopen >}}
 Planning Exercises and Exercises 1-3 in Content Management Due

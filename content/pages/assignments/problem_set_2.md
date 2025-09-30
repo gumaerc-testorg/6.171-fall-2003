@@ -19,8 +19,8 @@ video_metadata:
 Reading for This Week
 ---------------------
 
-*   [_Philip and Alex's Guide to Web Publishing_](http://photo.net/wtr/thebook/). Chapters 3, 13, 14 and 15.
-*   [Using the ArsDigita Community System](http://photo.net/wtr/using-the-acs.html).
+*   {{% resource_link "318c7058-5cff-4a99-b5b9-70b099b534ec" "_Philip and Alex's Guide to Web Publishing_" %}}. Chapters 3, 13, 14 and 15.
+*   {{% resource_link "310f9d59-f360-4431-9460-a54c49565d59" "Using the ArsDigita Community System" %}}.
 
 Objectives
 ----------
@@ -65,7 +65,7 @@ Users**:** No. Most of the conference rooms are reservable by anyone. However, 
 {{< anchor "2" >}}{{< /anchor >}}The Big (Software) Picture
 -----------------------------------------------------------
 
-You're building a program that keeps track of users, groups of users, rooms, and room reservations. You could build this program from scratch, but we already have a documented debugged toolkit, the ArsDigita Community System, designed to support communities of users, subsets of which are collected into groups. You can probably get your program finished faster if you start with the toolkit, but more importantly you will achieve higher reliability (e.g., the user registration stuff has been debugged already) and higher maintainability (because the user and user groups portions of the software are documented in a book chapter residing at a permanent URL: [Chapter 3: Scalable Systems for Online Communities](http://photo.net/wtr/thebook/community.html)).
+You're building a program that keeps track of users, groups of users, rooms, and room reservations. You could build this program from scratch, but we already have a documented debugged toolkit, the ArsDigita Community System, designed to support communities of users, subsets of which are collected into groups. You can probably get your program finished faster if you start with the toolkit, but more importantly you will achieve higher reliability (e.g., the user registration stuff has been debugged already) and higher maintainability (because the user and user groups portions of the software are documented in a book chapter residing at a permanent URL: {{% resource_link "87eba75a-cb35-4c5a-a5d7-2e8c696c3f8a" "Chapter 3: Scalable Systems for Online Communities" %}}).
 
 Some of what you'll be doing in this problem set is creating RDBMS tables from scratch and writing Tcl procedures to perform transactions on those tables, just as you did in problem set 1. Much of what you're doing here, though, is figuring out clean ways of using and extending the toolkit. Sometimes this is as simple as visiting the toolkit admin pages (/admin) of your server and using Web forms to add user groups.
 
@@ -124,7 +124,7 @@ This is the only user group that you will need to complete the pset. Using the a
 
 Using the file naming and placement conventions set forth create a SQL data model file to hold new table definitions for your room reservation system. Since part of the naming convention is that your data model file must be called "module-name.sql", you have to come up with a name for your module. In order to make life easier for us in looking over your shoulder, please refrain from being creative and call your module "reserve".
 
-A good thing to do now is to step away from your computer with hardcopies of this problem set and [Data Modeling](http://photo.net/sql/data-modeling.html). Read the problem set cover-to-cover before writing anything down. Otherwise, halfway through the pset, you might find yourself having to back up, alter tables, rewrite .tcl scripts, and rewrite documentation.
+A good thing to do now is to step away from your computer with hardcopies of this problem set and {{% resource_link "d55e8386-ca4d-4501-b309-88cd31346294" "Data Modeling" %}}. Read the problem set cover-to-cover before writing anything down. Otherwise, halfway through the pset, you might find yourself having to back up, alter tables, rewrite .tcl scripts, and rewrite documentation.
 
 Here are some guidelines for your data model. Please note that this is not intended to be a complete listing of all the necessary steps.
 
@@ -266,7 +266,7 @@ If you want to act like a professional Web programmer, you therefore have to run
 
 What do the users get from their professionally programmed systems? Double booked rooms. The average professional Web programmer probably won't handle the case where two users submit room requests at precisely the same second.
 
-Hold yourself to a higher standard by making new-2.tcl lock the reservations table before querying to confirm room availability. Read the transactions chapter of [_SQL for Web Nerds_](http://photo.net/sql/) to find out how to lock tables.
+Hold yourself to a higher standard by making new-2.tcl lock the reservations table before querying to confirm room availability. Read the transactions chapter of {{% resource_link "9ae166e0-36de-4850-b3a2-9ea5209e3d66" "_SQL for Web Nerds_" %}} to find out how to lock tables.
 
 {{< anchor "3" >}}{{< /anchor >}}Making it Real
 -----------------------------------------------
@@ -305,7 +305,7 @@ Here's a step-by-step plan:
 >     *   Regular user requesting approval-required room (insert reservation, email administrator, serve special page to user saying "your request has been submitted to ... and we'll let you know if it is approved")
 >         
 >     
->     See the AOLserver Tcl Developer's Guide at [AOLserver](http://aolserver.com/) **for an explanation of the ns\_sendmail API call.**
+>     See the AOLserver Tcl Developer's Guide at {{% resource_link "815487e5-c9df-4913-a407-67be5f4dc08d" "AOLserver" %}} **for an explanation of the ns\_sendmail API call.**
 >     
 > *   We would like room administrators to be able to approve or deny room requests directly from their email client ("one-click approval"). So the email notice to a room administrator must contain a URL which, if visited, will approve the room request without the room administrator having to log in. An alternative URL in the same email message would allow the room admin to deny a reservation request. This mechanism should be reasonably secure, i.e., a user should not be able to approve his or her own request by doing some URL surgery.
 >     
@@ -328,9 +328,9 @@ Here's the plan:
 
 > *   Add a column to your data model so that a room can have an associated charge (a number; name the column fee unless you are passionately devoted to something else). Assume that we're only using US dollars so you don't need to record units.
 >     
->     Remember that one of the beauties of Oracle is that you can add columns to tables and legacy software will continue to work. Visit [the data modeling chapter of SQL for Web Nerds](http://photo.net/sql/data-modeling.html) if you need to be reminded of the syntax of alter table.
+>     Remember that one of the beauties of Oracle is that you can add columns to tables and legacy software will continue to work. Visit {{% resource_link "d55e8386-ca4d-4501-b309-88cd31346294" "the data modeling chapter of SQL for Web Nerds" %}} if you need to be reminded of the syntax of alter table.
 >     
-> *   Alter the reservations table so that it has some of the ecommerce fields mentioned in [Chapter 14: ecommerce](http://photo.net/wtr/thebook/ecommerce.html), e.g., order\_state, name\_on\_card, billing\_zip\_code.
+> *   Alter the reservations table so that it has some of the ecommerce fields mentioned in {{% resource_link "9aa3ac5b-7c7b-47f4-84b9-69391192218b" "Chapter 14: ecommerce" %}}, e.g., order\_state, name\_on\_card, billing\_zip\_code.
 >     
 > *   Augment /admin/reserve/room-edit.tcl so that the administrator can adjust the prices of various rooms and then add a small fee to one room (we recommend making this 0.25 or 0.50; remember that these are real credit cards and real money).
 >     
@@ -350,7 +350,7 @@ Here's the plan:
 >         
 >     2.  Check to see if there is already a row in the reservations table with the same reservation\_id; if so, assume double click, abort the transaction (ns\_db dml $db "abort transaction", ns\_returnredirect to index.tcl page, and call return to terminate execution of the page.
 >         
->     3.  Insert a row in the reservations table with order\_state of "confirmed". As explained in the "An Extra Layer of Transactions" section of [Chapter 14: ecommerce](http://photo.net/wtr/thebook/ecommerce.html), you want to make sure that you write something into your local database before going out to the credit card system and trying to bill someone's card.
+>     3.  Insert a row in the reservations table with order\_state of "confirmed". As explained in the "An Extra Layer of Transactions" section of {{% resource_link "9aa3ac5b-7c7b-47f4-84b9-69391192218b" "Chapter 14: ecommerce" %}}, you want to make sure that you write something into your local database before going out to the credit card system and trying to bill someone's card.
 >         
 >     4.  Release the lock (end the transaction).
 >         
@@ -358,7 +358,7 @@ Here's the plan:
 >         
 >     6.  Update the row to reflect "authorized" or "failed".
 
-See [cybercash.com](http://www.cybercash.com/) if you really want to understand the CyberCash system. If you just want to learn enough to get by, look at the code in order-2.tcl (from the open-source [ArsDigita Shoppe package](http://www.eveandersson.com/arsdigita/free-tools/shoppe.html)). Interesting lines in order-2.tcl include the following:
+See {{% resource_link "58de2ff0-0412-4c76-a3e7-0b52ec95ae8e" "cybercash.com" %}} if you really want to understand the CyberCash system. If you just want to learn enough to get by, look at the code in order-2.tcl (from the open-source {{% resource_link "20599c4e-e5d2-4a63-a190-2ad8b1e7c029" "ArsDigita Shoppe package" %}}). Interesting lines in order-2.tcl include the following:
 
 > #the auth step  
 > cc\_send\_to\_server\_21 "mauthonly" $args $cc\_output

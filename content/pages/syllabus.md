@@ -20,11 +20,11 @@ Lectures: 2 sessions / week, 1.5 hours / session
 
 ## Prerequisites
 
-This is a senior-level class at MIT where we expect the average student to be working on a bachelor's or master's degree in computer science, to have taken our introduction to computer science ([6.001](https://ocw.mit.edu/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005/)), to have taken our core software engineering class ([6.170](https://ocw.mit.edu/courses/6-170-laboratory-in-software-engineering-fall-2005/)), and to have done at least some programming during summer jobs.
+This is a senior-level class at MIT where we expect the average student to be working on a bachelor's or master's degree in computer science, to have taken our introduction to computer science ({{% resource_link "f69cc996-372b-4bba-aee4-ceed3090a950" "6.001" %}}), to have taken our core software engineering class ({{% resource_link "7ed50f48-f742-459f-a69e-d9e0c754c0f0" "6.170" %}}), and to have done at least some programming during summer jobs.
 
 That said, the class does not require any knowledge of particular computer languages or systems. I.e., the students will learn enough about the required tools as the course progresses.
 
-Admission to 6.171 is by permission of instructor. If you'd like to take the class, please fill out the survey ({{% resource_link "f773da0c-ade4-e5ce-7978-59aed0815cb8" "PDF" %}}) and return it via email. If you are unsure about whether your preparation is adequate, a good way to find out is by simply doing the work in the [first chapter/problem set](http://philip.greenspun.com/seia/basics) and including the URL of your running system in your survey. This will reassure us of your ability to install and maintain the multiple subsystems that are, unfortunately, required to support a modern Web application.
+Admission to 6.171 is by permission of instructor. If you'd like to take the class, please fill out the survey ({{% resource_link "f773da0c-ade4-e5ce-7978-59aed0815cb8" "PDF" %}}) and return it via email. If you are unsure about whether your preparation is adequate, a good way to find out is by simply doing the work in the {{% resource_link "0b4501f3-8b32-42ae-925c-bd571f086514" "first chapter/problem set" %}} and including the URL of your running system in your survey. This will reassure us of your ability to install and maintain the multiple subsystems that are, unfortunately, required to support a modern Web application.
 
 ## Description
 
@@ -39,7 +39,7 @@ This is a course for students who already have some programming and software eng
 - Requirements that change mid-way through a project, sometimes because of experience gained from testing with users
 - User demands for a multi-modal interface: Web, mobile (WAP), and voice
 
-The bottom line: we want one someone who has finished this course to be able to build [amazon.com](http://www.amazon.com/), [eBay](http://www.ebay.com/), or [photo.net](http://photo.net/gallery/) by him or herself.
+The bottom line: we want one someone who has finished this course to be able to build {{% resource_link "574b04b5-751b-482a-8ca6-4701b3438acf" "amazon.com" %}}, {{% resource_link "f9c63869-b8dd-4c56-88be-51d1add38cb0" "eBay" %}}, or {{% resource_link "78e9c7da-15a5-4bdd-8c33-39e3a179d399" "photo.net" %}} by him or herself.
 
 This is a laboratory course where most of the learning occurs during the completion of problem sets. Students organize into groups of 2-4 for the purpose of building an online learning community. Each problem set is devoted to adding features and capabilities to the online community. We encourage students to work with a real customer or client. Good sources of clients for online communities include organizations that want knowledge sharing systems (intranets) and non-profit organizations that wish to operate a public online learning community within their area of expertise. Students who themselves have a passion for a particular topic sometimes build an online community in that area.
 
@@ -47,16 +47,16 @@ This is a laboratory course where most of the learning occurs during the complet
 
 One of the good things about 6.171 is that students are free to use tools of their choosing in completing the coursework. The upside of this is that if you've had a summer job in which you used Postgres and PHP (for example), you won't be distracted during the semester by having to learn new syntax. The downside is that we, the teaching staff, can't help you very much with setup and administration of tools. Each student is expected to set up and maintain his or her environment, on his or her own computer, ideally a couple of weeks before the start of the semester.
 
-If you have not done any Web development already and therefore aren't familiar with any of the standard tools, we can suggest some ways to configure your development server based on our past experience. The [Basics chapter](http://philip.greenspun.com/seia/basics) of the course text discusses tool options. In choosing tools, please note that 6.171 requires the use of an ACID-compliant relational database management system. You'll learn the definition of "ACID" during the semester. But for now suffice it to say that MySQL is out; Microsoft® SQL Server, Postgres, and Oracle are in.
+If you have not done any Web development already and therefore aren't familiar with any of the standard tools, we can suggest some ways to configure your development server based on our past experience. The {{% resource_link "0b4501f3-8b32-42ae-925c-bd571f086514" "Basics chapter" %}} of the course text discusses tool options. In choosing tools, please note that 6.171 requires the use of an ACID-compliant relational database management system. You'll learn the definition of "ACID" during the semester. But for now suffice it to say that MySQL is out; Microsoft® SQL Server, Postgres, and Oracle are in.
 
 Here are some helpful links for things that are either popular or non-obvious:
 
 - Microsoft .NET, SQL Server, Windows® 2003: these tools are available at no charge to MIT students doing coursework
-- The Oracle database server: all the Oracle database server tools can be [downloaded](http://www.oracle.com/); these are available at no charge to developers worldwide; the versions that you download do not expire and are not crippled in any way
-- [PostgreSQL](http://www.postgresql.org/)
-- [AOLserver](http://www.aolserver.com/); if you need help plugging it together with Oracle or Postgres, look at [these forums](http://www.openacs.org/bboard/)
-- Apache™: [Apache HTTP Server Project](http://httpd.apache.org/) and [Apache Modules](http://httpd.apache.org/modules/)
-- Microsoft® Internet Information Server (IIS): [microsoft.public.inetserver.\* newsgroups](http://groups.google.com/groups?hl=en&lr=&ie=UTF-8&oe=UTF-8&group=microsoft.public.inetserver)
+- The Oracle database server: all the Oracle database server tools can be {{% resource_link "f34e1c75-8b3a-4eea-bdff-52848d5ed24f" "downloaded" %}}; these are available at no charge to developers worldwide; the versions that you download do not expire and are not crippled in any way
+- {{% resource_link "3c129555-9dbb-424f-b29e-78ca0e0f53d6" "PostgreSQL" %}}
+- {{% resource_link "e0a9f454-8c9c-4456-ac3f-91c2fb960a0a" "AOLserver" %}}; if you need help plugging it together with Oracle or Postgres, look at {{% resource_link "13733e93-95b0-49b8-940d-22e224873a38" "these forums" %}}
+- Apache™: {{% resource_link "4e49a6a8-3673-494e-a585-ea7ed891da8f" "Apache HTTP Server Project" %}} and {{% resource_link "05d02840-276f-4429-899e-e434748b1597" "Apache Modules" %}}
+- Microsoft® Internet Information Server (IIS): {{% resource_link "2c76fbe3-83fe-4ea0-85cd-c3cf5f43cde1" "microsoft.public.inetserver.\* newsgroups" %}}
 
 ## Grading and Required Work
 
@@ -105,17 +105,17 @@ This course was developed by Hal Abelson, the late Michael Dertouzos, and Philip
 - May 2001: "Teaching Software Engineering" paper presented at the Web conference in Hong Kong, describing our experience with the course and the rationale behind the new curriculum and textbook
 - Spring 2002: the revamped version offered at MIT as 6.171
 
-Bottom line: about 1000 CS majors have gone through this curriculum and all but about 30 have become competent database-backed Web service developers. A more detailed history and explanation of this course is [available](http://philip.greenspun.com/teaching/teaching-software-engineering).
+Bottom line: about 1000 CS majors have gone through this curriculum and all but about 30 have become competent database-backed Web service developers. A more detailed history and explanation of this course is {{% resource_link "34d83032-4bf8-4773-83ea-e32db02239af" "available" %}}.
 
 ## Ongoing Glory
 
 Here are some examples of good things have happened in or because of 6.916/6.171:
 
 - From Spring 1999     
-    The image sharing service at [photo.net](http://www.photo.net/gallery/) was developed in Spring 1999 by a student team. The system continues to run on the public Internet and permits nearly 300,000 to share and comment on uploaded photographs.
+    The image sharing service at {{% resource_link "6cf91434-d9d2-4a31-b76a-1a6331bdd246" "photo.net" %}} was developed in Spring 1999 by a student team. The system continues to run on the public Internet and permits nearly 300,000 to share and comment on uploaded photographs.
 - From Fall 1999     
-    Camfield Estates continues to serve the residents of a public housing project in inner-city Boston (see the [background](https://link.springer.com/chapter/10.1007%2F3-540-45636-8_9) on this project by Randal D. Pinkett, a Media Lab graduate student)
+    Camfield Estates continues to serve the residents of a public housing project in inner-city Boston (see the {{% resource_link "a79ac084-0163-454c-93f2-9cea4c74ab41" "background" %}} on this project by Randal D. Pinkett, a Media Lab graduate student)
 - From Fall 2000     
-    MIT UPV is online and providing an international cultural exchange for hundreds of students at MIT and Valencia, as described in this [WIRED magazine article](http://www.wired.com/category/magazine/).
+    MIT UPV is online and providing an international cultural exchange for hundreds of students at MIT and Valencia, as described in this {{% resource_link "439d90f6-4d7d-4e93-84c1-2b767e0b7b05" "WIRED magazine article" %}}.
 
-A reasonably complete list of old projects is [available](https://philip.greenspun.com/seia/writeup). In addition to continuing public sites, 6.916/6.171 has also produced a few startup companies as students who took the course together continued their collaboration in industry. (Of course, that was in the go-go years of the Internet; now most of the students graduate and take jobs at IBM, Microsoft, and Oracle.)
+A reasonably complete list of old projects is {{% resource_link "6145619e-8114-4beb-bf41-fce1b0fd2382" "available" %}}. In addition to continuing public sites, 6.916/6.171 has also produced a few startup companies as students who took the course together continued their collaboration in industry. (Of course, that was in the go-go years of the Internet; now most of the students graduate and take jobs at IBM, Microsoft, and Oracle.)
