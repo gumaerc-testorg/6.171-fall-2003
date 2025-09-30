@@ -73,7 +73,7 @@ We need a way to represent the kinds of objects that our system will represent f
 
 To say that "John McCarthy developed the Lisp programming language", the user would create two objects: one of type language and one of type person. Why not link to the users table instead? John McCarthy might not be a registered user of the system. Some of the people you'll be referencing, e.g., John Von Neumann, are dead. Characteristics of the Lisp language would be stored as elements of the language object.
 
-For an example of what a completed system of this nature might look like to the casual reader, visit Paul Black's [_Dictionary of Algorithms and Data Structures_](http://www.nist.gov/dads/).
+For an example of what a completed system of this nature might look like to the casual reader, visit Paul Black's {{% resource_link "b206b36d-103a-40cc-bd81-7cc0be5b2d6b" "_Dictionary of Algorithms and Data Structures_" %}}.
 
 For each object type we'll be creating an Oracle table. For each Oracle table we create, we store one row in the metadata table:
 
@@ -236,7 +236,7 @@ Notice that this table allows the users to map an object to any other object in 
 
 For simplicity, assume that associations are bidirectional. If a user associates the Huffman encoding algorithm (used in virtually every compression scheme, including JPEG) with the person David A. Huffman (MIT Course VI grad student and then faculty member), we should also interpret that to mean that the person David A. Huffman is associated with the algorithm for Huffman encoding. This is why the columns in km\_object\_object\_map have names like "table\_name\_a" instead of "from\_table".
 
-The primary key constraint above has the side effect of creating an index that makes it fast to ask the question "is object A related to object B?". For efficiency in querying "is object B related to object A?", create a concatenated index on the columns in the other order. (The trees chapter of [_SQL for Web Nerds_](http://philip.greenspun.com/sql/trees), gives some examples of concatenated indices. Also read the composite indices section of the Oracle Tuning manual. See also the Oracle SQL Reference section.)
+The primary key constraint above has the side effect of creating an index that makes it fast to ask the question "is object A related to object B?". For efficiency in querying "is object B related to object A?", create a concatenated index on the columns in the other order. (The trees chapter of {{% resource_link "dc51dd21-545e-4609-9eb2-a13f621d3bcf" "_SQL for Web Nerds_" %}}, gives some examples of concatenated indices. Also read the composite indices section of the Oracle Tuning manual. See also the Oracle SQL Reference section.)
 
 ### Exercise 4: Write a Program to Generate a "Drop All Tables" Script
 
@@ -292,7 +292,7 @@ where 0 = (select count(last_msg_id) from msg_id_generator);
 
 Apply this idea to the problem of thread-safe logging if and only if there isn't an identical row logged within the last 24 hours.
 
-[Date/Time Arithmetic](http://philip.greenspun.com/sql/dates)
+{{% resource_link "20fe9c5a-d532-4fa9-b99c-d979d1b120da" "Date/Time Arithmetic" %}}
 
 ### Exercise 7: Gather More Statistics
 

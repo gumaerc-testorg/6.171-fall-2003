@@ -27,15 +27,15 @@ You have one week to complete the exam.
 
 Here are some resources that will help you answer the questions below.
 
-- [The course textbook](http://philip.greenspun.com/seia/?) 
-- [Philip and Alex's Guide to Web Publishing](http://philip.greenspun.com/panda/)
-- [SQL for Web Nerds](http://philip.greenspun.com/sql/)
+- {{% resource_link "c632a6a4-9e34-4436-bacd-1a9169faa97c" "The course textbook" %}} 
+- {{% resource_link "174e871c-c282-415b-9c2c-9c7f11219cc1" "Philip and Alex's Guide to Web Publishing" %}}
+- {{% resource_link "d03f0bd0-eda6-44e9-a452-d13538aef49b" "SQL for Web Nerds" %}}
 
 Problems or questions? Email Instructor.
 
 ## Question 1: Developing a Data Model
 
-Visit [friendster.com](http://www.friendster.com). If you're not already a member, sign up for an account.
+Visit {{% resource_link "aeb50fb8-0c0c-4de2-95d7-327b620b5e42" "friendster.com" %}}. If you're not already a member, sign up for an account.
 
 1. Find Ben, using a "user search," and add him as a friend (Ben said that he went into Computer Science because he wanted to meet a lot of cool people). You should do this earlier rather than later so that you have time to complete the exercises.
 2. Look at a page describing a user. Look carefully at the information presented on this profile, including friends' comments.
@@ -86,7 +86,7 @@ Expected length of answer: 1 page.
 
 ## Question 4: Extending the Application with Distributed Computing
 
-Jose Frio Cuarenta, senior MIT administrator, has decided that friendship networks are the next hot thing and wants to bring the magic of Friendster to MIT by building *MITster*. Being the total [Organization Man](http://www.english.upenn.edu/~afilreis/50s/whyte-main.html), he conceives this as a standalone application in which every MIT-affiliated person registers and comes to visit the site. Philip '82 and Gerry '68 can discover that they both live in the same city, share some interests, and are connected through Hal 'XX \[we could tell you but we'd have to kill you\].
+Jose Frio Cuarenta, senior MIT administrator, has decided that friendship networks are the next hot thing and wants to bring the magic of Friendster to MIT by building *MITster*. Being the total {{% resource_link "64729202-c413-4bfd-a522-012fb9e5ef52" "Organization Man" %}}, he conceives this as a standalone application in which every MIT-affiliated person registers and comes to visit the site. Philip '82 and Gerry '68 can discover that they both live in the same city, share some interests, and are connected through Hal 'XX \[we could tell you but we'd have to kill you\].
 
 Jose brings you into the project to lay out the system requirements and your first question is Why can't they just use Friendster? Jose responds that he isn't satisfied with Friendster's community features. A group of friends should be able to start an ad-hoc group with a private discussion forum, collaborative workspace, event planner, etc.
 
@@ -98,7 +98,7 @@ Here again we're looking for a reasonable structure not a complete solution with
 
 ## Question 5: Fun with Data Warehousing
 
-Using the Levi Strauss data model defined in the "Real World Example" section of [Data Warehousing](http://philip.greenspun.com/sql/data-warehousing), write SQL queries that answer the following questions:
+Using the Levi Strauss data model defined in the "Real World Example" section of {{% resource_link "80db0736-7437-4817-a4d5-ef05ddc29a52" "Data Warehousing" %}}, write SQL queries that answer the following questions:
 
 - For each region in the U.S., how many pairs of pants were sold to repeat versus first-time customers?
 - Starting from the inception of this business, what are the aggregate sales for each month, ordered from least recent to most recent months?
