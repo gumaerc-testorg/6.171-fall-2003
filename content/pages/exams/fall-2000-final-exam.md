@@ -27,9 +27,9 @@ Even though we have given you six hours to work on this exam, you should be able
 
 Here are some resources that will help you answer the questions below.
 
-- [Philip and Alex's Guide to Web Publishing](http://philip.greenspun.com/panda/)
-- [SQL for Web Nerds](http://philip.greenspun.com/sql/)
-- "[Introduction to AOLserver](http://philip.greenspun.com/wtr/)", parts 1 and 2 (see Server Tools section)
+- {{% resource_link "174e871c-c282-415b-9c2c-9c7f11219cc1" "Philip and Alex's Guide to Web Publishing" %}}
+- {{% resource_link "d03f0bd0-eda6-44e9-a452-d13538aef49b" "SQL for Web Nerds" %}}
+- "{{% resource_link "f8beea9f-f78c-4830-a0c3-6b304ce2d3cd" "Introduction to AOLserver" %}}", parts 1 and 2 (see Server Tools section)
 
 ## Question 1: Normalizing a Data Model
 
@@ -86,7 +86,7 @@ Here are your constraints:
 - you've got to be back at MIT on January 8 for the start of IAP; more than 200 people have signed up for the "Joy of PL/SQL" seminar that you're teaching
 - being a student in the coolest course at MIT has been great for your love life; you've got a new romantic partner and you'll need two spots on the cruise
 
-Start by visiting the [Carnival](http://www.carnival.com) site and spend no more than 3 minutes attempting to answer the question "Do they have two free spots on any cruise departing on or after December 26 and returning before January 8?"
+Start by visiting the {{% resource_link "0a884633-be50-4c81-8912-b883617333e9" "Carnival" %}} site and spend no more than 3 minutes attempting to answer the question "Do they have two free spots on any cruise departing on or after December 26 and returning before January 8?"
 
 ### Question 2a
 
@@ -94,7 +94,7 @@ Suggest five things that the designers of this site could have done differently 
 
 Now we'll add a twist: you're gay. You don't want to end up on a Patrick Buchanan-themed cruise.
 
-Spend another three minutes surfing around the [Carnival](http://www.carnival.com) site to get a feel for life on board one of the ships (maybe start by picking the ship Paradise). See if you can find any information about whether Carnival offers special gay-themed cruises or gathering places for gays.
+Spend another three minutes surfing around the {{% resource_link "0a884633-be50-4c81-8912-b883617333e9" "Carnival" %}} site to get a feel for life on board one of the ships (maybe start by picking the ship Paradise). See if you can find any information about whether Carnival offers special gay-themed cruises or gathering places for gays.
 
 ### Question 2b
 
