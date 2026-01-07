@@ -20,7 +20,7 @@ Reading for This Week
 
 *   Oracle Intermedia Text reference.
 *   Oracle Tree Extensions sections in Oracle 8: The Complete Reference.
-*   SQL for Web Nerds, [tree chapter](http://philip.greenspun.com/sql/trees.html?).
+*   SQL for Web Nerds, {{% resource_link "c03d1eb8-c571-43bc-9aaf-291ba39f89aa" "tree chapter" %}}.
 
 Objectives
 ----------
@@ -193,7 +193,7 @@ Using the system described at http://photo.net/doc/general-comments.html, extend
 
 ### Exercise 5: Adding Stories
 
-Repeat exercises 3 and 4 but for stories. You'll need to use the ns\_ora clob\_dml API call documented in [http://arsdigita.com/free-tools/oracle-driver.html](http://arsdigita.com/free-tools/oracle-driver.html)
+Repeat exercises 3 and 4 but for stories. You'll need to use the ns\_ora clob\_dml API call documented in {{% resource_link "f2e065cc-5905-4a70-8810-73fb3ecf871d" "http://arsdigita.com/free-tools/oracle-driver.html" %}}
 
 ### Exercise 6: Event Planning Data Model
 

@@ -29,14 +29,14 @@ Resources
 
 Here are some resources that will help you answer the questions below.
 
-*   [Philip and Alex's Guide to Web Publishing](http://philip.greenspun.com/panda/)
-*   [SQL for Web Nerds](http://philip.greenspun.com/sql/)
-*   "[Introduction to AOLserver](http://philip.greenspun.com/wtr/)", parts 1 and 2 (see Server Tools section)    
+*   {{% resource_link "174e871c-c282-415b-9c2c-9c7f11219cc1" "Philip and Alex's Guide to Web Publishing" %}}
+*   {{% resource_link "d03f0bd0-eda6-44e9-a452-d13538aef49b" "SQL for Web Nerds" %}}
+*   "{{% resource_link "f8beea9f-f78c-4830-a0c3-6b304ce2d3cd" "Introduction to AOLserver" %}}", parts 1 and 2 (see Server Tools section)    
 
 Question 1: Thinking About the Overall Application
 --------------------------------------------------
 
-Suppose that you are part of committee designing a Web service for intramural sports at MIT. Visit the  [MIT IM sports](https://intramurals.mit.edu/) site to get an idea of what an attempt to build a site like this looks like but do not be constrained in your thinking by what you see there.
+Suppose that you are part of committee designing a Web service for intramural sports at MIT. Visit the  {{% resource_link "3c812039-1ba7-45e6-a4d1-fcf1634389c0" "MIT IM sports" %}} site to get an idea of what an attempt to build a site like this looks like but do not be constrained in your thinking by what you see there.
 
 What are the user classes for an ideal site like this? What should each class of user be able to do? What are the core benefits of doing this as a Web application instead of adding a section to the Tech?
 
@@ -73,7 +73,7 @@ Discuss the relative merits of the following approaches to user activity analysi
 Question 5: Usability Analysis
 ------------------------------
 
-Every successful Web project has at least one participant who is passionate about the end-user experience. It is important to become skilled at working through a usage scenario and noting specifically what should be changed on each page. We haven't built our ideal IM sports site so we'll shift gears to a real running system:  [http://photo.net/](http://photo.net/) (the image sharing service portion of the site was built as a 6.170 project in Spring 1999).
+Every successful Web project has at least one participant who is passionate about the end-user experience. It is important to become skilled at working through a usage scenario and noting specifically what should be changed on each page. We haven't built our ideal IM sports site so we'll shift gears to a real running system:  {{% resource_link "87d82e11-763e-41d0-9742-0f067323b512" "http://photo.net/" %}} (the image sharing service portion of the site was built as a 6.170 project in Spring 1999).
 
 Work through the following scenarios:
 

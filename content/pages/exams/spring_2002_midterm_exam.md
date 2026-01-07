@@ -29,16 +29,16 @@ Resources
 
 Here are some resources that will help you answer the questions below.
 
-*   [The course textbook](http://philip.greenspun.com/seia/)
-*   [Philip and Alex's Guide to Web Publishing](http://philip.greenspun.com/panda/?)
-*   [SQL for Web Nerds](http://philip.greenspun.com/sql/)
+*   {{% resource_link "5541978d-fb5d-4597-a165-7a6ce38b7ea4" "The course textbook" %}}
+*   {{% resource_link "419025e7-006c-4cab-a19b-c07547efacb4" "Philip and Alex's Guide to Web Publishing" %}}
+*   {{% resource_link "d03f0bd0-eda6-44e9-a452-d13538aef49b" "SQL for Web Nerds" %}}
 
 Problems or questions? Email instructor.
 
 Question 1: Developing a Data Model
 -----------------------------------
 
-Visit [netflix.com](http://www.netflix.com). Sign up for the free 10-day trial membership and take the following steps:
+Visit {{% resource_link "9dac1af1-f205-4931-91ed-d3814e75dbac" "netflix.com" %}}. Sign up for the free 10-day trial membership and take the following steps:
 
 1.  Look at a page describing the movie "Strictly Ballroom". Look carefully at the information presented on this movie, including user reviews and the categorization of user reviews.
 2.  Add a few movies to your rental queue.
@@ -71,7 +71,7 @@ Print out a transcript of a database session in which you use your query to gene
 Question 3: Usability Analysis
 ------------------------------
 
-Visit [photo.net](http://www.photo.net/)  with the goal of uploading three photos and sharing them with six friends (by emailing them a URL).
+Visit {{% resource_link "73749a0f-609b-40e5-a6bf-cc343b329295" "photo.net" %}}  with the goal of uploading three photos and sharing them with six friends (by emailing them a URL).
 
 Take the following steps:
 
@@ -87,7 +87,7 @@ Expected length of answer: 1-2 pages.
 Question 4: Thinking About the Overall Application
 --------------------------------------------------
 
-Suppose that someone notices the inconsistencies and prevailing lameness of the average MIT campus organization's Web site (see [Activities and Clubs at MIT](http://www.mit.edu/activities/) for a list of offenders). Here we are at the school that invented the Web (with a bit of help from the Swiss physicists and NCSA) and this is the best we can do?
+Suppose that someone notices the inconsistencies and prevailing lameness of the average MIT campus organization's Web site (see {{% resource_link "3c39a791-1edb-4b4b-8ea2-fe89199928c5" "Activities and Clubs at MIT" %}} for a list of offenders). Here we are at the school that invented the Web (with a bit of help from the Swiss physicists and NCSA) and this is the best we can do?
 
 Imagine that you've been asked by the Associate Dean for Internet Self-Esteem to develop a central server that will provide outsourced IT to MIT student organizations. Each organization will get its own corner of this server rather than having to build a standalone Web site. What services should this central facility provide to organizations? To a club leader? To a club member? To a new student trying to figure out which clubs to join? To an MIT Dean trying to figure out which clubs to fund?
 
